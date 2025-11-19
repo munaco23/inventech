@@ -1,0 +1,17 @@
+/* Terms layout to match provided design (left sidebar, right content) */
+:root{ --ink:#0f172a; --muted:#6b7280; --accent:#f59e0b; }
+*{ box-sizing: border-box; }
+body{ font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif; color:var(--ink); }
+.container{ max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+
+.terms-hero{ padding: 96px 0 28px; background: linear-gradient(180deg,#ffffff 0%, #f8fafc 100%); border-bottom:1px solid rgba(2,6,23,.08); }
+.terms-hero h1{ margin:0 0 10px; font-size:34px; font-weight:800; letter-spacing:-.015em; text-align:center; }
+.terms-hero .lead{ color:var(--muted); max-width:880px; margin:0 auto 8px; text-align:center; line-height:1.8; }
+.terms-hero .meta{ color:#0f172a; font-weight:700; text-align:center; opacity:.7; }
+
+/* Simple one-column terms content */
+.terms-summary{ padding: 20px 0 60px; background:#fff; }
+.terms-summary .container{ max-width: 860px; }
+.terms-summary h2{ font-size: 26px; font-weight: 800; text-align: center; margin: 0 0 10px; }
+.terms-summary h3{ font-size: 18px; margin: 16px 0 6px; padding-top: 10px; border-top: 1px solid rgba(2,6,23,.08); }
+.terms-summary p{ color: var(--muted); line-height: 1.85; margin: 6px 0 10px; }

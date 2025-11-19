@@ -1,0 +1,331 @@
+<svg viewBox="0 0 900 650" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+    <linearGradient id="screen1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background blobs -->
+  <ellipse class="bg-blob" cx="150" cy="100" rx="180" ry="140" fill="#e0f2fe" opacity="0.4"/>
+  <ellipse class="bg-blob" cx="750" cy="550" rx="200" ry="160" fill="#dbeafe" opacity="0.4"/>
+  
+  <!-- Floor -->
+  <ellipse cx="450" cy="580" rx="380" ry="40" fill="#cbd5e1" opacity="0.2"/>
+
+  <!-- Large Monitor/Screen (Center) -->
+  <g class="monitor-main">
+    <rect x="280" y="120" width="380" height="260" rx="15" fill="#ffffff" stroke="#cbd5e1" stroke-width="4" filter="url(#shadow)"/>
+    <rect x="295" y="135" width="350" height="220" rx="8" fill="url(#screen1)"/>
+    
+    <!-- Browser chrome -->
+    <rect x="295" y="135" width="350" height="28" rx="8" fill="#1e293b"/>
+    <circle cx="310" cy="149" r="5" fill="#ef4444"/>
+    <circle cx="328" cy="149" r="5" fill="#f59e0b"/>
+    <circle cx="346" cy="149" r="5" fill="#10b981"/>
+    <text x="470" y="153" font-size="11" fill="#64748b" text-anchor="middle">www.development-team.com</text>
+    
+    <!-- Code content -->
+    <g class="code-typing">
+      <rect class="code-l1" x="310" y="180" width="160" height="7" rx="3" fill="#14b8a6" opacity="0.8"/>
+      <rect class="code-l2" x="330" y="195" width="130" height="7" rx="3" fill="#22d3ee" opacity="0.7"/>
+      <rect class="code-l3" x="330" y="210" width="150" height="7" rx="3" fill="#14b8a6" opacity="0.8"/>
+      <rect class="code-l4" x="310" y="225" width="110" height="7" rx="3" fill="#22d3ee" opacity="0.7"/>
+      <rect class="code-l1" x="330" y="240" width="140" height="7" rx="3" fill="#14b8a6" opacity="0.8"/>
+      <rect class="code-l2" x="310" y="255" width="120" height="7" rx="3" fill="#22d3ee" opacity="0.7"/>
+      <rect class="code-l3" x="330" y="270" width="135" height="7" rx="3" fill="#14b8a6" opacity="0.8"/>
+    </g>
+    
+    <!-- Cursor blinking -->
+    <rect x="450" y="240" width="2" height="9" fill="#14b8a6">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Monitor stand -->
+    <rect x="440" y="382" width="60" height="25" rx="6" fill="#64748b"/>
+    <rect x="410" y="405" width="120" height="12" rx="6" fill="#475569"/>
+  </g>
+
+  <!-- Developer 1 (Left - Yellow shirt) -->
+  <g class="dev-1">
+    <!-- Chair -->
+    <ellipse cx="180" cy="520" rx="45" ry="12" fill="#475569"/>
+    <rect x="165" y="450" width="30" height="70" rx="8" fill="#64748b"/>
+    <circle cx="165" cy="525" r="8" fill="#334155"/>
+    <circle cx="195" cy="525" r="8" fill="#334155"/>
+    
+    <!-- Body -->
+    <ellipse cx="180" cy="420" rx="50" ry="60" fill="#fbbf24"/>
+    
+    <!-- Arms -->
+    <ellipse cx="145" cy="430" rx="18" ry="45" fill="#fbbf24" transform="rotate(-25 145 430)"/>
+    <ellipse cx="215" cy="430" rx="18" ry="45" fill="#fbbf24" transform="rotate(25 215 430)"/>
+    
+    <!-- Hands on laptop -->
+    <ellipse cx="200" cy="470" rx="12" ry="8" fill="#fcd34d"/>
+    <ellipse cx="160" cy="470" rx="12" ry="8" fill="#fcd34d"/>
+    
+    <!-- Laptop -->
+    <rect x="140" y="465" width="80" height="50" rx="4" fill="#1e293b" transform="rotate(-5 180 490)"/>
+    <rect x="145" y="470" width="70" height="40" rx="2" fill="#0f172a" transform="rotate(-5 180 490)"/>
+    <rect x="150" y="475" width="30" height="3" rx="1" fill="#14b8a6" transform="rotate(-5 180 490)"/>
+    <rect x="150" y="482" width="25" height="3" rx="1" fill="#22d3ee" transform="rotate(-5 180 490)"/>
+    
+    <!-- Head -->
+    <circle cx="180" cy="360" r="35" fill="#fcd34d"/>
+    
+    <!-- Hair -->
+    <path d="M150 350 Q145 330 160 325 Q175 320 190 325 Q205 330 210 350" fill="#1e293b"/>
+    
+    <!-- Eyes -->
+    <circle cx="170" cy="360" r="3" fill="#1e293b"/>
+    <circle cx="190" cy="360" r="3" fill="#1e293b"/>
+    
+    <!-- Smile -->
+    <path d="M170 372 Q180 378 190 372" stroke="#1e293b" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Developer 2 (Center - Red shirt, standing) -->
+  <g class="dev-2">
+    <!-- Body -->
+    <ellipse cx="450" cy="450" rx="55" ry="70" fill="#ef4444"/>
+    
+    <!-- Arms -->
+    <ellipse cx="410" cy="460" rx="20" ry="50" fill="#ef4444" transform="rotate(-30 410 460)"/>
+    <ellipse cx="490" cy="460" rx="20" ry="50" fill="#ef4444" transform="rotate(30 490 460)"/>
+    
+    <!-- Hands pointing -->
+    <circle cx="395" cy="420" r="14" fill="#fca5a5"/>
+    <circle cx="505" cy="420" r="14" fill="#fca5a5"/>
+    
+    <!-- Head -->
+    <circle cx="450" cy="380" r="40" fill="#fca5a5"/>
+    
+    <!-- Hair -->
+    <ellipse cx="450" cy="360" rx="42" ry="30" fill="#1e293b"/>
+    
+    <!-- Beard -->
+    <path d="M425 395 Q450 405 475 395" fill="#1e293b"/>
+    
+    <!-- Eyes -->
+    <circle cx="438" cy="380" r="3" fill="#1e293b"/>
+    <circle cx="462" cy="380" r="3" fill="#1e293b"/>
+    
+    <!-- Smile -->
+    <path d="M438 395 Q450 402 462 395" stroke="#1e293b" stroke-width="2" fill="none" stroke-linecap="round"/>
+    
+    <!-- Legs -->
+    <rect x="430" y="515" width="18" height="60" rx="9" fill="#1e293b"/>
+    <rect x="452" y="515" width="18" height="60" rx="9" fill="#1e293b"/>
+    
+    <!-- Shoes -->
+    <ellipse cx="439" cy="575" rx="16" ry="8" fill="#0f172a"/>
+    <ellipse cx="461" cy="575" rx="16" ry="8" fill="#0f172a"/>
+  </g>
+
+  <!-- Developer 3 (Right - Purple shirt) -->
+  <g class="dev-3">
+    <!-- Chair -->
+    <ellipse cx="720" cy="520" rx="45" ry="12" fill="#475569"/>
+    <rect x="705" y="450" width="30" height="70" rx="8" fill="#64748b"/>
+    <circle cx="705" cy="525" r="8" fill="#334155"/>
+    <circle cx="735" cy="525" r="8" fill="#334155"/>
+    
+    <!-- Body -->
+    <ellipse cx="720" cy="420" rx="50" ry="60" fill="#a855f7"/>
+    
+    <!-- Arms -->
+    <ellipse cx="685" cy="430" rx="18" ry="45" fill="#a855f7" transform="rotate(-25 685 430)"/>
+    <ellipse cx="755" cy="430" rx="18" ry="45" fill="#a855f7" transform="rotate(25 755 430)"/>
+    
+    <!-- Hands typing -->
+    <ellipse cx="700" cy="475" rx="12" ry="8" fill="#c084fc"/>
+    <ellipse cx="740" cy="475" rx="12" ry="8" fill="#c084fc"/>
+    
+    <!-- Tablet/Laptop -->
+    <rect x="680" y="470" width="80" height="50" rx="4" fill="#1e293b" transform="rotate(5 720 495)"/>
+    <rect x="685" y="475" width="70" height="40" rx="2" fill="#0f172a" transform="rotate(5 720 495)"/>
+    <rect x="690" y="480" width="35" height="3" rx="1" fill="#a855f7" transform="rotate(5 720 495)"/>
+    <rect x="690" y="487" width="28" height="3" rx="1" fill="#c084fc" transform="rotate(5 720 495)"/>
+    
+    <!-- Head -->
+    <circle cx="720" cy="360" r="35" fill="#c084fc"/>
+    
+    <!-- Hair (long) -->
+    <ellipse cx="720" cy="350" rx="38" ry="35" fill="#1e293b"/>
+    <ellipse cx="700" cy="370" rx="15" ry="30" fill="#1e293b"/>
+    <ellipse cx="740" cy="370" rx="15" ry="30" fill="#1e293b"/>
+    
+    <!-- Eyes -->
+    <circle cx="710" cy="360" r="3" fill="#1e293b"/>
+    <circle cx="730" cy="360" r="3" fill="#1e293b"/>
+    
+    <!-- Smile -->
+    <path d="M710 372 Q720 378 730 372" stroke="#1e293b" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Floating Charts (Top Left) -->
+  <g class="chart-float">
+    <rect x="50" y="80" width="120" height="100" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="3" filter="url(#shadow)"/>
+    <!-- Donut charts -->
+    <circle cx="80" cy="115" r="18" fill="none" stroke="#14b8a6" stroke-width="6" stroke-dasharray="56 57"/>
+    <circle cx="80" cy="115" r="18" fill="none" stroke="#22d3ee" stroke-width="6" stroke-dasharray="28 85" transform="rotate(180 80 115)"/>
+    
+    <circle cx="130" cy="115" r="18" fill="none" stroke="#ef4444" stroke-width="6" stroke-dasharray="70 43"/>
+    <circle cx="130" cy="115" r="18" fill="none" stroke="#f59e0b" stroke-width="6" stroke-dasharray="35 78" transform="rotate(252 130 115)"/>
+    
+    <!-- Bar chart -->
+    <rect x="60" y="155" width="12" height="15" rx="2" fill="#14b8a6"/>
+    <rect x="78" y="145" width="12" height="25" rx="2" fill="#22d3ee"/>
+    <rect x="96" y="150" width="12" height="20" rx="2" fill="#14b8a6"/>
+    <rect x="114" y="140" width="12" height="30" rx="2" fill="#22d3ee"/>
+    <rect x="132" y="148" width="12" height="22" rx="2" fill="#14b8a6"/>
+  </g>
+
+  <!-- Code Window (Top Right) -->
+  <g class="code-window">
+    <rect x="730" y="80" width="140" height="110" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="3" filter="url(#shadow)"/>
+    <rect x="740" y="90" width="120" height="85" rx="6" fill="#1e293b"/>
+    
+    <!-- Code tag -->
+    <text x="800" y="115" font-size="32" font-weight="bold" fill="#14b8a6" text-anchor="middle">&lt;/&gt;</text>
+    <rect x="750" y="140" width="100" height="4" rx="2" fill="#22d3ee" opacity="0.6"/>
+    <rect x="750" y="150" width="80" height="4" rx="2" fill="#14b8a6" opacity="0.6"/>
+    <rect x="750" y="160" width="90" height="4" rx="2" fill="#22d3ee" opacity="0.6"/>
+  </g>
+
+  <!-- Coffee Cup -->
+  <g class="coffee">
+    <ellipse cx="250" cy="520" rx="18" ry="6" fill="#64748b" opacity="0.3"/>
+    <rect x="235" y="495" width="30" height="35" rx="4" fill="#14b8a6"/>
+    <rect x="238" y="498" width="24" height="28" fill="#0f172a" opacity="0.3"/>
+    <path d="M265 505 Q275 505 275 515 Q275 525 265 525" stroke="#14b8a6" stroke-width="3" fill="none"/>
+    <!-- Steam -->
+    <path class="steam" d="M245 485 Q243 475 245 465" stroke="#cbd5e1" stroke-width="2" fill="none" opacity="0.6" stroke-linecap="round"/>
+    <path class="steam" d="M255 485 Q257 475 255 465" stroke="#cbd5e1" stroke-width="2" fill="none" opacity="0.6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Plant (Right side) -->
+  <g class="plant">
+    <rect x="820" y="500" width="50" height="60" rx="8" fill="#14b8a6" opacity="0.3"/>
+    <ellipse cx="845" cy="500" rx="25" ry="8" fill="#10b981" opacity="0.4"/>
+    <!-- Leaves -->
+    <ellipse cx="835" cy="480" rx="15" ry="25" fill="#10b981" transform="rotate(-20 835 480)"/>
+    <ellipse cx="855" cy="480" rx="15" ry="25" fill="#10b981" transform="rotate(20 855 480)"/>
+    <ellipse cx="845" cy="465" rx="12" ry="22" fill="#10b981"/>
+  </g>
+
+  <!-- Floating Icons -->
+  <g class="icon-float">
+    <!-- Check badge -->
+    <circle cx="680" cy="250" r="24" fill="#10b981" opacity="0.9"/>
+    <path d="M672 250 l6 6 l12 -12" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round"/>
+    
+    <!-- Notification -->
+    <circle cx="220" cy="250" r="22" fill="#ef4444" opacity="0.9"/>
+    <circle cx="230" cy="242" r="6" fill="#ffffff"/>
+    <text x="230" y="247" font-size="10" font-weight="bold" fill="#ef4444" text-anchor="middle">3</text>
+    
+    <!-- Settings -->
+    <circle cx="800" cy="420" r="20" fill="#f59e0b" opacity="0.9"/>
+    <circle cx="800" cy="420" r="8" fill="#ffffff"/>
+    <circle cx="800" cy="406" r="3" fill="#ffffff"/>
+    <circle cx="800" cy="434" r="3" fill="#ffffff"/>
+    <circle cx="786" cy="420" r="3" fill="#ffffff"/>
+    <circle cx="814" cy="420" r="3" fill="#ffffff"/>
+  </g>
+
+  <!-- Decorative dots -->
+  <circle class="dot" cx="100" cy="580" r="6" fill="#14b8a6" opacity="0.3"/>
+  <circle class="dot" cx="850" cy="250" r="5" fill="#22d3ee" opacity="0.3"/>
+  <circle class="dot" cx="50" cy="300" r="7" fill="#a855f7" opacity="0.3"/>
+  <circle class="dot" cx="870" cy="580" r="6" fill="#f59e0b" opacity="0.3"/>
+
+  <style>
+    .bg-blob { animation: blobFloat 20s ease-in-out infinite; }
+    @keyframes blobFloat {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(10px, -10px) scale(1.05); }
+    }
+    
+    .code-typing rect { animation: typeCode 4s ease-in-out infinite; }
+    @keyframes typeCode {
+      0%, 100% { transform: scaleX(1); opacity: 0.8; }
+      20% { transform: scaleX(0); opacity: 0.3; }
+      60% { transform: scaleX(1); opacity: 1; }
+    }
+    
+    .code-l1 { animation-delay: 0s; }
+    .code-l2 { animation-delay: 0.3s; }
+    .code-l3 { animation-delay: 0.6s; }
+    .code-l4 { animation-delay: 0.9s; }
+    
+    .dev-1 { animation: devWork 6s ease-in-out infinite; }
+    .dev-3 { animation: devWork 6s ease-in-out infinite 1s; }
+    @keyframes devWork {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    
+    .dev-2 { animation: devPresent 8s ease-in-out infinite; }
+    @keyframes devPresent {
+      0%, 100% { transform: translateX(0) scale(1); }
+      50% { transform: translateX(5px) scale(1.02); }
+    }
+    
+    .chart-float { animation: chartFloat 10s ease-in-out infinite; }
+    @keyframes chartFloat {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-15px) rotate(2deg); }
+    }
+    
+    .code-window { animation: windowFloat 12s ease-in-out infinite; }
+    @keyframes windowFloat {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(-2deg); }
+    }
+    
+    .coffee { animation: coffeeFloat 5s ease-in-out infinite; }
+    @keyframes coffeeFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    
+    .steam { animation: steamRise 3s ease-in-out infinite; }
+    @keyframes steamRise {
+      0% { opacity: 0.6; transform: translateY(0); }
+      100% { opacity: 0; transform: translateY(-20px); }
+    }
+    
+    .plant { animation: plantSway 8s ease-in-out infinite; }
+    @keyframes plantSway {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(3deg); }
+    }
+    
+    .icon-float { animation: iconBounce 6s ease-in-out infinite; }
+    @keyframes iconBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    
+    .dot { animation: dotPulse 4s ease-in-out infinite; }
+    @keyframes dotPulse {
+      0%, 100% { transform: scale(1); opacity: 0.3; }
+      50% { transform: scale(1.5); opacity: 0.6; }
+    }
+    
+    .monitor-main { animation: monitorGlow 8s ease-in-out infinite; }
+    @keyframes monitorGlow {
+      0%, 100% { filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15)); }
+      50% { filter: drop-shadow(0 8px 20px rgba(20,184,166,0.3)); }
+    }
+  </style>
+</svg>
