@@ -15,44 +15,128 @@
   ];
 
   function injectFallbackHeader() {
+    // Full markup copied from header.html (with relative paths)
     const fallbackHTML = `
-      <nav style="position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0,0,0,0.1);">
-        <div style="max-width: 1200px; margin: 0 auto; height: 80px; display: flex; align-items: center; justify-content: space-between; padding: 0 24px;">
-          <div class="logo" style="display: flex; align-items: center;">
-            <img src="/imgaes/logo13.png" alt="Logo" style="width: 90px; height: 80px;">
+<!-- Site Header / Navigation -->
+<style>
+  /* Overlay submenu (inside full-screen menu) */
+  .nav-container-menu-right ul li.has-submenu > a{ display:flex; align-items:center; gap:8px; }
+  .nav-container-menu-right ul li.has-submenu > a .caret{ width:18px; height:18px; opacity:.85; transition: transform .25s ease, opacity .2s ease; vertical-align:middle; }
+  .nav-container-menu-right ul li.has-submenu > a:hover .caret{ opacity:1; }
+  /* closed: down chevron; open: rotate to up */
+  .nav-container-menu-right ul li.open > a .caret{ transform: rotate(180deg); }
+
+  .nav-container-menu-right ul li > .submenu{ list-style:none; margin:8px 0 0 12px; padding:0; display:grid; gap:8px; overflow:hidden; max-height:0; opacity:0; transform: translateY(-6px); transition: max-height .35s ease, opacity .25s ease, transform .25s ease; }
+  .nav-container-menu-right ul li > .submenu a{ font-size:1.05rem; font-weight:600; color:#0f172a; text-decoration:none; opacity:.9; }
+  .nav-container-menu-right ul li > .submenu a:hover{ color:#14b8a6; }
+  .nav-container-menu-right ul li.open > .submenu{ max-height:500px; opacity:1; transform: translateY(0); }
+  @media (max-width: 640px){ .nav-container-menu-right ul li > .submenu a{ font-size:1.02rem; } }
+
+  /* basic desktop hover dropdown if header is used outside overlay */
+  .nav-container .submenu{ display:none; position:absolute; background:#fff; border:1px solid rgba(2,6,23,.08); border-radius:12px; padding:10px 12px; box-shadow:0 10px 24px rgba(2,6,23,.08); max-height:initial; opacity:1; transform:none; }
+  .nav-container ul li:hover > .submenu{ display:block; }
+</style>
+<nav>
+  <div class="nav-container">
+    <div class="logo">
+      <img src="imgaes/logo13.png" alt="" style=" width: 90px;  height: 80px; ">
+      <div class="logo-image-slider">
+        <div class="sliding-image active">
+          <img src="imgaes/logo09.png" alt="Image 1">
+        </div>
+        <div class="sliding-image">
+          <img src="imgaes/logo09.png" alt="Image 1 duplicate">
+        </div>
+      </div>
+    </div>
+    <div class="menu">
+      <a href="https://wa.me/923396500012" target="_blank" rel="noopener">Let's Talk</a>
+      <div class="humburger">
+        <div class="humburger1"></div>
+        <div class="humburger2"></div>
+      </div>
+    </div>
+  </div>
+  <div class="nav-container-menu">
+    <div class="nav-container-menu-uper">
+      <div class="nav-container-menu-left">
+        <div class="nav-container-menu-left-img">
+          <img src="imgaes/LogoLight.avif" alt="Default Image" id="menu-hover-img">
+        </div>
+      </div>
+      <div class="nav-container-menu-right">
+        <ul>
+          <li data-image="imgaes/home.jpg"><a href="index.html">Home</a></li>
+          <li data-image="imgaes/About-header.png"><a href="about.html">About</a></li>
+          <li data-image="imgaes/services.jpg" class="has-submenu">
+            <a href="index.html#services">Services 
+              <svg class="caret" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <ul class="submenu">
+              <li><a href="services/web-development.html">Web Development</a></li>
+              <li><a href="services/app-development.html">App Development</a></li>
+              <li><a href="services/wordpress.html">WordPress</a></li>
+              <li><a href="services/custom-software.html">Custom Software</a></li>
+            </ul>
+          </li>
+          <li data-image="imgaes/experties.jpg"><a href="index.html#expertise">Expertise</a></li>
+          <li data-image="imgaes/whychoseus.jpg"><a href="index.html#why-choose-us">Why Choose Us</a></li>
+          <li data-image="imgaes/testominal.jpg"><a href="terms.html">Terms & Conditions</a></li>
+          <li data-image="imgaes/contact.jpg"><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="nav-container-menu-lower">
+      <div class="nav-container-menu-lower-getintouch">
+        <div class="nav-container-menu-lower-getintouch-text">
+          <p>Get in Touch</p>
+        </div>
+        <div class="get-in-touch-cards">
+          <div class="get-in-touch-card">
+            <i class="fas fa-envelope"></i>
+            <span>
+              <a href="mailto:salmanshahbaz1215@gmail.com">inventechworld@gmail.com</a>
+            </span>
           </div>
-          <div class="menu" style="display: flex; align-items: center; gap: 20px;">
-            <a href="#contact" style="color: #0f172a; font-weight: 600; text-decoration: none;">Let's Talk</a>
-            <div class="humburger" style="width: 30px; height: 20px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;">
-              <div class="humburger1" style="width: 100%; height: 2px; background-color: #0f172a; transition: all 0.3s ease;"></div>
-              <div class="humburger2" style="width: 100%; height: 2px; background-color: #0f172a; transition: all 0.3s ease;"></div>
-            </div>
+          <div class="get-in-touch-card">
+            <i class="fas fa-phone"></i>
+            <span>
+              <a href="tel:+923001234567">+92 3396500012</a>
+            </span>
+          </div>
+          <div class="get-in-touch-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>
+              <a href="#">People colony, Gujranwala Pakistan</a>
+            </span>
           </div>
         </div>
-        <div class="nav-container-menu" style="position: absolute; top: 80px; left: 0; width: 100%; background: white; transform: translateY(-120%); transition: transform 0.7s ease; z-index: 101; padding: 50px 0;">
-          <div class="nav-container-menu-uper" style="display: flex; max-width: 1200px; margin: 0 auto; padding: 0 24px;">
-            <div class="nav-container-menu-left" style="flex: 1;">
-              <div class="nav-container-menu-left-img">
-                <img src="/imgaes/LogoLight.avif" alt="Menu Image" id="menu-hover-img" style="width: 100%; max-width: 400px; border-radius: 10px;">
-              </div>
-            </div>
-            <div class="nav-container-menu-right" style="flex: 1; padding-left: 40px;">
-              <ul style="list-style: none; padding: 0; margin: 0;">
-                <li data-image="/imgaes/home.jpg" style="margin-bottom: 20px;"><a href="/Home.Html#home" style="color: #0f172a; font-size: 2rem; font-weight: 600; text-decoration: none;">Home</a></li>
-                <li data-image="/imgaes/about.jpg" style="margin-bottom: 20px;"><a href="/about.html" style="color: #0f172a; font-size: 2rem; font-weight: 600; text-decoration: none;">About</a></li>
-                <li data-image="/imgaes/services.jpg" style="margin-bottom: 20px;"><a href="/Home.Html#services" style="color: #0f172a; font-size: 2rem; font-weight: 600; text-decoration: none;">Services</a></li>
-                <li data-image="/imgaes/experties.jpg" style="margin-bottom: 20px;"><a href="/Home.Html#expertise" style="color: #0f172a; font-size: 2rem; font-weight: 600; text-decoration: none;">Expertise</a></li>
-                <li data-image="/imgaes/whychoseus.jpg" style="margin-bottom: 20px;"><a href="/Home.Html#why-choose-us" style="color: #0f172a; font-size: 2rem; font-weight: 600; text-decoration: none;">Why Choose Us</a></li>
-                <li data-image="/imgaes/terms.jpg" style="margin-bottom: 20px;"><a href="/terms.html" style="color: #0f172a; font-size: 2rem; font-weight: 600; text-decoration: none;">Terms & Conditions</a></li>
-                <li data-image="/imgaes/contact.jpg" style="margin-bottom: 20px;"><a href="/Home.Html#contact" style="color: #0f172a; font-size: 2rem; font-weight: 600; text-decoration: none;">Contact</a></li>
-              </ul>
-            </div>
-          </div>
+      </div>
+      <div class="nav-container-menu-lower-followsus">
+        <div class="nav-container-menu-lower-followsus-text">
+          <p>Follow Us</p>
         </div>
-      </nav>
-    `;
-    
+        <div class="nav-container-menu-lower-followsus-icons">
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
     injectHeader(fallbackHTML);
+  }
+
+  // If opened directly from filesystem, fetch will be blocked. Inject fallback immediately.
+  if (location.protocol === 'file:') {
+    injectFallbackHeader();
+    return;
   }
 
   (function tryNext(i){
