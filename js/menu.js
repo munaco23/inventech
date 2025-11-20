@@ -96,11 +96,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Close menu when clicking on navigation links
+        // Close menu when clicking on in-page hash links, but NOT the submenu toggle
         const navLinks = document.querySelectorAll('.nav-container-menu-right ul li a');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
-                if (link.getAttribute('href').startsWith('#')) {
+                // skip the Services dropdown toggle
+                if (link.classList.contains('submenu-toggle')) return;
+                const href = link.getAttribute('href') || '';
+                if (href.startsWith('#')) {
                     closeMenu();
                 }
             });
