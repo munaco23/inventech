@@ -4,6 +4,50 @@
     const container = document.getElementById('site-header');
     if (!container) return;
     container.innerHTML = html;
+
+    // Normalize paths for GitHub Pages project sites and fix 'imgaes' typo
+    try {
+      // Determine base path: for project pages user.github.io/repo, prefix with '/repo/'
+      var base = '/';
+      if (location.hostname.endsWith('github.io')) {
+        var parts = location.pathname.split('/').filter(Boolean);
+        if (parts.length > 0) base = '/' + parts[0] + '/';
+      }
+
+      // Helper to prefix base for absolute-like '/' and support 'imgaes/' relative paths
+      var fixPath = function(p) {
+        if (!p) return p;
+        if (p.startsWith('/')) {
+          return base + p.replace(/^\//, '');
+        }
+        if (p.startsWith('imgaes/')) {
+          return base + p;
+        }
+        return p;
+      };
+
+      // Fix anchors
+      container.querySelectorAll('a[href]').forEach(function(a){
+        var href = a.getAttribute('href');
+        if (!href) return;
+        // Do not change hash-only links and mailto/tel
+        if (href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || /^https?:\/\//i.test(href)) return;
+        a.setAttribute('href', fixPath(href));
+      });
+
+      // Fix images
+      container.querySelectorAll('img[src]').forEach(function(img){
+        var src = img.getAttribute('src');
+        img.setAttribute('src', fixPath(src));
+      });
+
+      // Fix data-image attributes used for hover previews
+      container.querySelectorAll('[data-image]').forEach(function(el){
+        var di = el.getAttribute('data-image');
+        el.setAttribute('data-image', fixPath(di));
+      });
+    } catch (e) { /* noop */ }
+
     // Notify listeners that header has been injected
     document.dispatchEvent(new Event('header:loaded'));
   }
@@ -151,4 +195,43 @@
       })
       .catch(() => tryNext(i+1));
   })(0);
+
+  // Also normalize the whole document for GitHub Pages: fix 'imgaes' typos and prefix base for absolute-like paths
+  document.addEventListener('DOMContentLoaded', function(){
+    try {
+      var base = '/';
+      if (location.hostname.endsWith('github.io')) {
+        var parts = location.pathname.split('/').filter(Boolean);
+        if (parts.length > 0) base = '/' + parts[0] + '/';
+      }
+      var fixPath = function(p) {
+        if (!p) return p;
+        if (p.startsWith('/')) return base + p.replace(/^\//,'');
+        if (p.startsWith('imgaes/')) return base + p;
+        return p;
+      };
+
+      // images in body
+      document.querySelectorAll('img[src]').forEach(function(img){
+        var src = img.getAttribute('src');
+        var fixed = fixPath(src);
+        if (fixed !== src) img.setAttribute('src', fixed);
+      });
+
+      // background images via data-image attributes
+      document.querySelectorAll('[data-image]').forEach(function(el){
+        var di = el.getAttribute('data-image');
+        var fixed = fixPath(di);
+        if (fixed !== di) el.setAttribute('data-image', fixed);
+      });
+
+      // Optional: core top-level internal links common across pages
+      document.querySelectorAll('a[href]').forEach(function(a){
+        var href = a.getAttribute('href');
+        if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || /^https?:\/\//i.test(href)) return;
+        var fixed = fixPath(href);
+        if (fixed !== href) a.setAttribute('href', fixed);
+      });
+    } catch (e) { /* noop */ }
+  });
 })();
