@@ -1873,17 +1873,20 @@ background: url(../imgaes/expertise.jpg);
             align-items: stretch;
             gap: 1.25rem;
             width: max-content;
-            animation: teamMarquee 35s linear infinite;
+            will-change: transform;
+            backface-visibility: hidden;
+            transform: translate3d(0,0,0);
+            animation: teamMarquee3d 40s linear infinite;
         }
         .team-marquee:hover .team-track{ animation-play-state: paused; }
-        .team-marquee .team-card{ flex: 0 0 320px; width: 320px; }
+        .team-marquee .team-card{ flex: 0 0 320px; width: 320px; transform: translateZ(0); will-change: transform; }
 
-        @keyframes teamMarquee{ from{ transform: translateX(0); } to{ transform: translateX(-50%); } }
+        @keyframes teamMarquee3d{ from{ transform: translate3d(0,0,0); } to{ transform: translate3d(-50%,0,0); } }
 
         /* Mobile/Tablet fallback to grid */
         @media (max-width: 1024px){
             .team-marquee{ overflow: visible; }
-            .team-track{ animation-duration: 28s; }
+            .team-track{ animation-duration: 32s; }
         }
         @media (max-width: 768px){
             .team-marquee{ overflow: visible; }
@@ -1971,6 +1974,8 @@ background: url(../imgaes/expertise.jpg);
             box-shadow: 0 24px 60px rgba(47, 213, 199, 0.15), 0 8px 20px rgba(2, 6, 23, 0.1);
             border-color: transparent;
         }
+        /* Prevent hover-induced reflows while marquee is moving */
+        .team-marquee:not(:hover) .team-card:hover { transform: none; box-shadow: 0 10px 24px rgba(2,6,23,0.06); }
         
         .team-card:hover::before {
             opacity: 1;
