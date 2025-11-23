@@ -1080,7 +1080,7 @@ body {
     .software-hero .hero-content { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
     .software-hero .container{ padding-left: 0; padding-right: 16px; }
     .software-hero h1 { font-size: 2.5rem; }
-    .hero-stats { grid-template-columns: repeat(3,1fr); gap:.75rem; justify-items:center; }
+    .hero-stats { grid-template-columns: repeat(2,1fr); gap:.75rem; justify-items:center; }
     .hero-cta { justify-content: center; flex-wrap: wrap; gap: 0.25rem; row-gap: 4px; column-gap: 6px; margin-top: 0; }
     .hero-cta .btn{ padding: 0.85rem 1.25rem; margin: 0; }
     .hero-illustration{ min-height: 340px; padding: 24px 12px; place-items: center; }
