@@ -543,6 +543,16 @@ body {
 .tech-bubble{ position:absolute; width:72px; height:72px; border-radius:50%; display:grid; place-items:center; color:#fff; font-size:26px; background:var(--bg,#14b8a6); left:var(--x,50%); top:var(--y,50%); transform:translate(-50%,-50%); box-shadow:0 12px 24px rgba(2,6,23,.12); animation: bubbleFloat 6s ease-in-out infinite; animation-delay: var(--d,0ms); }
 @keyframes bubbleFloat{ 0%,100%{ transform:translate(-50%,-50%) } 50%{ transform:translate(calc(-50% + 4px), calc(-50% - 8px)) } }
 
+/* Smooth up-down motion for icons inside technology bubbles */
+.app-tech-visual .tech-bubble i{
+  animation: techIconFloat 4.8s ease-in-out infinite;
+}
+
+@keyframes techIconFloat{
+  0%,100%{ transform: translateY(-4px); }
+  50%{ transform: translateY(6px); }
+}
+
 @media (max-width: 992px){
   .app-tech-grid{ grid-template-columns:1fr; }
   .app-tech-visual{ min-height:340px; order:2; }

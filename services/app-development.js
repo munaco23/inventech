@@ -59,8 +59,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    // Observe elements for animation
-    const animateElements = document.querySelectorAll('.type-card, .feature-item, .portfolio-item, .pricing-card');
+    // Observe elements for animation (hero, tech stack, features, portfolio, pricing)
+    const animateElements = document.querySelectorAll(
+        '.app-dev-hero .hero-text, .app-dev-hero .hero-illustration, .app-technologies .app-tech-text, .app-technologies .app-tech-visual, .app-features.split-features .features-visual, .app-features.split-features .feature-step, .type-card, .feature-item, .portfolio-item, .pricing-card'
+    );
     
     animateElements.forEach(el => {
         el.style.opacity = '0';

@@ -57,9 +57,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    // Observe elements for scroll animations
+    // Observe elements for scroll animations (hero + sections)
     const animateElements = document.querySelectorAll(
-        '.type-card, .industry-item, .flow-step, .tech-category, .faq-item'
+        '.software-hero .hero-text, .software-hero .hero-illustration, .software-types .section-header, .software-types .type-card, .more-industries .section-header, .more-industries .industry-item, .software-process .flow-step, .software-technologies .cs-tech-text, .software-technologies .cs-tech-visual, .tech-category, .software-faq .faq-item'
     );
     
     animateElements.forEach((el, index) => {
@@ -291,8 +291,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Add loading states for interactive elements
-    const interactiveElements = document.querySelectorAll('.type-card, .industry-item, .tech-category');
+    // Add loading states for interactive elements (exclude .industry-item so it only animates on scroll)
+    const interactiveElements = document.querySelectorAll('.type-card, .tech-category');
     
     interactiveElements.forEach((element, index) => {
         element.style.animationDelay = `${index * 0.1}s`;

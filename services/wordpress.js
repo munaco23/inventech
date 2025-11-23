@@ -24,9 +24,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    // Observe elements for scroll animations
+    // Observe elements for scroll animations (including hero section)
     const animateElements = document.querySelectorAll(
-        '.service-card, .plugin-type, .theme-feature, .process-step, .tech-category, .pricing-card'
+        '.wordpress-hero .hero-text, .wordpress-hero .hero-stats, .wordpress-hero .hero-cta, .service-card, .plugin-type, .theme-feature, .process-step, .tech-category, .pricing-card'
     );
     
     animateElements.forEach((el, index) => {
@@ -284,6 +284,25 @@ document.addEventListener('DOMContentLoaded', function() {
             wpTicking = true;
         }
     });
+
+    // JavaScript-driven smooth float for WordPress tech stack icons
+    const wpTechIcons = document.querySelectorAll('.wp-tech-visual .wp-bubble i');
+    if (wpTechIcons.length) {
+        const amplitude = 8; // vertical pixels
+        const speed = 0.0025; // smaller = slower
+        const phases = Array.from(wpTechIcons).map((_, index) => index * 0.8);
+
+        function animateWpTechIcons(time) {
+            wpTechIcons.forEach((icon, idx) => {
+                const phase = phases[idx];
+                const offset = Math.sin(time * speed + phase) * amplitude;
+                icon.style.transform = `translateY(${offset}px)`;
+            });
+            requestAnimationFrame(animateWpTechIcons);
+        }
+
+        requestAnimationFrame(animateWpTechIcons);
+    }
 
     // Smooth scrolling for anchor links
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
