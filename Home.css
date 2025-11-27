@@ -4053,6 +4053,32 @@ background: url(../imgaes/expertise.jpg);
             transition: border-color 0.2s ease, box-shadow 0.2s ease;
         }
 
+        .internship-form input[type="file"] {
+            padding: 7px 10px;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .internship-form input[type="file"]::-webkit-file-upload-button {
+            padding: 7px 12px;
+            margin-right: 10px;
+            border-radius: 8px;
+            border: 1px solid #cbd5f1;
+            background: #f8fafc;
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+
+        .internship-form input[type="file"]::file-selector-button {
+            padding: 7px 12px;
+            margin-right: 10px;
+            border-radius: 8px;
+            border: 1px solid #cbd5f1;
+            background: #f8fafc;
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+
         .internship-form input:focus,
         .internship-form select:focus,
         .internship-form textarea:focus {
@@ -4121,6 +4147,16 @@ background: url(../imgaes/expertise.jpg);
 
             .internship-form .form-row {
                 grid-template-columns: 1fr;
+            }
+
+            .internship-form label {
+                font-size: 0.85rem;
+            }
+
+            .internship-form select,
+            .internship-form input,
+            .internship-form textarea {
+                font-size: 0.9rem;
             }
         }
 
