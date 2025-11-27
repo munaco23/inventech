@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internships at Inventech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Home.css?v=2">
+</head>
+<body>
+    <div id="site-header"></div>
+
+    <main class="internship-page">
+        <section class="internship-hero">
+            <div class="container">
+                <h1>Launch Your Career with an Internship at Inventech</h1>
+                <p>We offer real-world, project-based internships for students who want to build hands-on experience in web, mobile and software development.</p>
+            </div>
+        </section>
+
+        <section class="internship-process">
+            <div class="container">
+                <h2>How the Internship Application Process Works</h2>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <span class="step-number">1</span>
+                        <h3>Fill in the Application Form</h3>
+                        <p>Share your basic details, education, and area of interest.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-number">2</span>
+                        <h3>Screening & Shortlisting</h3>
+                        <p>Our team reviews your profile and shortlists candidates.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-number">3</span>
+                        <h3>Technical/HR Discussion</h3>
+                        <p>Shortlisted candidates are invited for an online interaction.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-number">4</span>
+                        <h3>Offer & Onboarding</h3>
+                        <p>Selected students receive an offer and onboarding details via email.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="internship-form-section" id="internship-apply">
+            <div class="container">
+                <h2>Apply for Internship</h2>
+                <p>Please fill in the form below. Our team will contact you if you are shortlisted.</p>
+
+                <form class="internship-form" id="internship-form" method="POST" action="https://formbold.com/s/982wZ" enctype="multipart/form-data">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="full_name">Full Name</label>
+                            <input type="text" id="full_name" name="full_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">WhatsApp / Phone</label>
+                            <input type="text" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="education">Current Education</label>
+                            <input type="text" id="education" name="education" placeholder="BS CS – 5th Semester" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="institute">Institute / University</label>
+                            <input type="text" id="institute" name="institute" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="track">Preferred Internship Track</label>
+                            <select id="track" name="track" required>
+                                <option value="">Select a track</option>
+                                <option value="web">Web Development</option>
+                                <option value="mobile">Mobile App Development</option>
+                                <option value="backend">Backend / APIs</option>
+                                <option value="uiux">UI/UX Design</option>
+                                <option value="uiux">Graphic Designing</option>
+                                <option value="uiux">Video Editing</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="cv">Upload CV / Resume (PDF, DOC)</label>
+                            <input type="file" id="cv" name="cv_file" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+                            <input type="hidden" id="cv_url" name="cv_url">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experience">Briefly describe your skills / experience</label>
+                        <textarea id="experience" name="experience" rows="4" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="portfolio">Portfolio / GitHub / LinkedIn (optional)</label>
+                        <input type="text" id="portfolio" name="portfolio" placeholder="Paste link if available">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Why do you want to intern at Inventech?</label>
+                        <textarea id="message" name="message" rows="3" required></textarea>
+                    </div>
+                    <p class="form-note">By submitting, you agree that we may contact you regarding this internship opportunity.</p>
+                    <div class="form-footer">
+                        <button type="submit" style="border: none;" class="btn btn-primary">Submit Application</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="js/header.js?v=2" defer></script>
+    <script src="js/menu.js" defer></script>
+    <script src="js/nav-hover.js" defer></script>
+    <script src="js/logo-slider.js" defer></script>
+    <script src="js/footer.js" defer></script>
+
+    <script>
+      const CLOUDINARY_CLOUD_NAME = 'dkglutgns';
+      const CLOUDINARY_UPLOAD_PRESET = 'internship-cv';
+
+      async function uploadCvToCloudinary(file) {
+        const url = `https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/auto/upload`;
+        const formData = new FormData();
+        formData.append('file', file);
+        formData.append('upload_preset', CLOUDINARY_UPLOAD_PRESET);
+
+        const response = await fetch(url, {
+          method: 'POST',
+          body: formData
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to upload CV. Please try again.');
+        }
+
+        const data = await response.json();
+        return data.secure_url;
+      }
+
+      (function() {
+        const form = document.getElementById('internship-form');
+        const cvInput = document.getElementById('cv');
+        const cvUrlInput = document.getElementById('cv_url');
+
+        if (!form) return;
+
+        form.addEventListener('submit', async function(e) {
+          // If no file selected, submit normally
+          const file = cvInput && cvInput.files && cvInput.files[0];
+          if (!file) {
+            return; // allow normal POST to FormBold
+          }
+
+          e.preventDefault();
+
+          try {
+            const url = await uploadCvToCloudinary(file);
+            if (cvUrlInput) {
+              cvUrlInput.value = url;
+            }
+
+            // Optional: clear file input name so FormBold doesn't receive raw file
+            cvInput.name = '';
+
+            form.submit();
+          } catch (err) {
+            alert(err.message || 'Could not upload CV. Please try again.');
+          }
+        });
+      })();
+    </script>
+</body>
+</html>

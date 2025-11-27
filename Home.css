@@ -3898,3 +3898,238 @@ background: url(../imgaes/expertise.jpg);
             .team-card-image { height: 320px; aspect-ratio: auto; width: 100%; }
             .team-card-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; background: transparent; }
         }
+
+        /* Internships Page */
+        .internship-page {
+            padding-top: 96px;
+            padding-bottom: 64px;
+            background: #f8fafc;
+        }
+
+        .internship-hero {
+            padding: 40px 0 24px;
+            background: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .internship-hero h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 0.75rem;
+            text-align: center;
+        }
+
+        .internship-hero p {
+            max-width: 720px;
+            margin: 0 auto;
+            text-align: center;
+            color: #64748b;
+            font-size: 1.05rem;
+        }
+
+        .internship-process {
+            padding: 40px 0 24px;
+            background: #f8fafc;
+        }
+
+        .internship-process h2 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #0f172a;
+        }
+
+        .internship-process .container {
+            text-align: center;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .process-step {
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            padding: 14px 18px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            column-gap: 14px;
+            row-gap: 4px;
+            text-align: left;
+            align-items: flex-start;
+            box-shadow: 0 6px 16px rgba(15, 23, 42, 0.04);
+        }
+
+        .process-step .step-number {
+            width: 32px;
+            height: 32px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #2FD5C7, #14D8C8);
+            color: #ffffff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1rem;
+            grid-row: span 2;
+        }
+
+        .process-step h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .process-step p {
+            font-size: 0.95rem;
+            color: #64748b;
+            margin: 0;
+        }
+
+        .internship-form-section {
+            padding: 40px 0 0;
+            background: #f8fafc;
+        }
+
+        .internship-form-section h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+        }
+
+        .internship-form-section p {
+            color: #64748b;
+            font-size: 1rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .internship-form {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 24px 24px 20px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+            text-align: left;
+        }
+
+        .internship-form .form-row {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px 20px;
+            margin-bottom: 16px;
+        }
+
+        .internship-form .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 14px;
+        }
+
+        .internship-form label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .internship-form input,
+        .internship-form select,
+        .internship-form textarea {
+            border-radius: 10px;
+            border: 1px solid #cbd5f1;
+            padding: 9px 11px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .internship-form input:focus,
+        .internship-form select:focus,
+        .internship-form textarea:focus {
+            border-color: #2FD5C7;
+            box-shadow: 0 0 0 1px rgba(47, 213, 199, 0.3);
+        }
+
+        .internship-form textarea {
+            resize: vertical;
+            min-height: 90px;
+        }
+
+        .internship-form .form-footer {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px 16px;
+            margin-top: 8px;
+        }
+
+        .internship-form .form-note {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        .internship-success {
+            margin: 18px auto 0;
+            max-width: 900px;
+            padding: 12px 14px;
+            border-radius: 12px;
+            background: #ecfdf5;
+            border: 1px solid #22c55e55;
+            color: #15803d;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .internship-success i {
+            color: #22c55e;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .internship-page {
+                padding-top: 88px;
+                padding-bottom: 40px;
+            }
+
+            .internship-hero {
+                padding: 28px 0 18px;
+            }
+
+            .internship-hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .internship-process h2 {
+                font-size: 1.5rem;
+            }
+
+            .internship-form {
+                padding: 18px 16px 16px;
+            }
+
+            .internship-form .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .internship-hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .internship-form-section h2 {
+                font-size: 1.4rem;
+            }
+        }
