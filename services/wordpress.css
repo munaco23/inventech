@@ -577,6 +577,9 @@ body {
     align-items: center;
     margin-bottom: 4rem;
     position: relative;
+    background: none;
+    box-shadow: none;
+    border: none;
 }
 
 .process-step:nth-child(odd) {
@@ -602,6 +605,7 @@ body {
     z-index: 2;
     margin: 0 2rem;
     flex-shrink: 0;
+    padding: 25px !important;
 }
 
 .step-content {
