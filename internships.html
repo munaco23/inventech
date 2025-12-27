@@ -7,6 +7,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="Home.css?v=2">
+    <style>
+        .internship-form .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 1.5rem;
+        }
+
+        .internship-form .form-group {
+            flex: 1;
+        }
+
+        /* Responsive styles for the form */
+        @media (max-width: 768px) {
+            .internship-form .form-row {
+                flex-direction: column;
+                gap: 0; /* Remove gap for stacked layout */
+                margin-bottom: 0;
+            }
+
+            .internship-form .form-row .form-group {
+                margin-bottom: 1.5rem; /* Add margin to the bottom of each group when stacked */
+            }
+        }
+
+        /* Basic styling for inputs to ensure they are full-width */
+        .internship-form input[type="text"],
+        .internship-form input[type="email"],
+        .internship-form select,
+        .internship-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .internship-form input[type="file"] {
+            padding: 9px;
+            width: 100%;
+        }
+    </style>
+    <link rel="icon" type="image/jpg" href="imgaes/favicon.jpg">
 </head>
 <body>
     <div id="site-header"></div>
