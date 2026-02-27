@@ -1,0 +1,21 @@
+InvenTech — Hospital & Medical Management Software (Brochure)
+
+Overview
+- A modern hospital management system for clinics, hospitals, and medical centers.
+- Designed to streamline OPD, IPD, lab, pharmacy, emergency, and specialized departments.
+
+Core Modules
+- Reception & Registration (MRN, tokens/queue)
+- OPD (appointments, consultations, prescriptions)
+- IPD & Ward (admission, bed management, discharge)
+- Emergency (triage, rapid processing)
+- Laboratory (orders, samples, results, reports)
+- Pharmacy (inventory, purchase, sales, expiry)
+- Billing & Accounts (invoices, payments, reports)
+- Dental (tooth charting, treatment plans)
+- Eye/Optometry (refraction, prescriptions)
+- Staff & Roles (RBAC, permissions, audit trails)
+
+Demo
+- Free 3-days guided demo available.
+- Contact: inventechworld@gmail.com
