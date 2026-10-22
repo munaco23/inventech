@@ -1,22 +1,4 @@
-// Page Loading Animation
-window.addEventListener('load', function() {
-    // Hide loader after page is fully loaded
-    setTimeout(function() {
-        document.body.classList.add('loaded');
-        document.getElementById('page-loader').classList.add('hidden');
-    }, 1500); // Show loader for 1.5 seconds minimum
-});
-
-// Alternative: Hide loader when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
-    // If page loads very quickly, still show loader for minimum time
-    setTimeout(function() {
-        if (!document.body.classList.contains('loaded')) {
-            document.body.classList.add('loaded');
-            document.getElementById('page-loader').classList.add('hidden');
-        }
-    }, 1000);
-});
+// Loader handled by components/home/loader/loader.js
 
 // Logo Image Slider Animation
 function initLogoSlider() {

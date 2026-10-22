@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const progress = Math.min(elapsed / duration, 1);
             
             const current = Math.floor(progress * target);
-            element.textContent = current + (target === 98 ? '%' : target === 150 ? '+' : '');
+            element.textContent = current + (target === 98 ? '%' : target === 150 ? '+' : target === 24 ? '/7' : '');
             
             if (progress < 1) {
                 requestAnimationFrame(updateCounter);

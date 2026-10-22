@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - InvenTech Software Company</title>
+    <meta name="description" content="Get in touch with InvenTech. Let's discuss your web development, mobile app, custom software or clinic management software project. Fast response guaranteed.">
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpg" href="imgaes/favicon.jpg">
+
+    <!-- Base Stylesheet -->
+    <link rel="stylesheet" href="Home.css?v=4">
+
+    <!-- Modular Component Stylesheets -->
+    <link rel="stylesheet" href="components/contact/hero/hero.css">
+    <link rel="stylesheet" href="components/contact/form-channels/form-channels.css">
+    <link rel="stylesheet" href="components/contact/map/map.css">
+    <link rel="stylesheet" href="components/contact/faq/faq.css">
+
+    <!-- Override: Hide duplicate footer contact form on this dedicated contact page -->
+    <style>
+        .contact-page #site-footer .contact {
+            display: none !important;
+        }
+    </style>
+</head>
+<body class="contact-page">
+    <!-- Dynamic Header Include -->
+    <div id="site-header"></div>
+
+    <!-- ======================================================================
+         Section 1: Contact Hero
+         ====================================================================== -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <span class="contact-hero-badge">
+                    <i class="fa-solid fa-headset" aria-hidden="true"></i> Get In Touch
+                </span>
+                <h1>Let's Build Something <span>Extraordinary</span> Together</h1>
+                <p>Have an ambitious idea, software requirement, or need dedicated engineers? Reach out to our team today for a free technical consultation and estimate.</p>
+
+                <!-- Quick Channels Strip -->
+                <div class="contact-quick-strip">
+                    <a href="https://wa.me/923396500012?text=Hello%20InvenTech,%20I%20would%20like%20to%20discuss%20a%20software%20project." 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="quick-channel-card">
+                        <div class="channel-icon">
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        </div>
+                        <div class="channel-info">
+                            <span class="channel-label">Instant Chat</span>
+                            <span class="channel-value">+92 339 6500012</span>
+                        </div>
+                    </a>
+
+                    <a href="mailto:inventechworld@gmail.com" class="quick-channel-card">
+                        <div class="channel-icon">
+                            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                        </div>
+                        <div class="channel-info">
+                            <span class="channel-label">Official Email</span>
+                            <span class="channel-value">inventechworld@gmail.com</span>
+                        </div>
+                    </a>
+
+                    <a href="#office-location" class="quick-channel-card">
+                        <div class="channel-icon">
+                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        </div>
+                        <div class="channel-info">
+                            <span class="channel-label">Headquarters</span>
+                            <span class="channel-value">People Colony, Gujranwala</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================================
+         Section 2: Project Inquiry & Consultation
+         ====================================================================== -->
+    <section class="contact-main-section" id="inquiry-form">
+        <div class="container">
+            <div class="contact-split-grid">
+                
+                <!-- Left: Why Partner With Us / What Happens Next -->
+                <div class="contact-hub">
+                    <div class="hub-header">
+                        <span class="hub-tag">Engineering Partnership</span>
+                        <h2>Let's Turn Your Concept Into High-Impact Software</h2>
+                        <p>Share your vision with us. Whether you need a dedicated development squad, an enterprise hospital system, or custom business software, we deliver end-to-end technical execution.</p>
+                    </div>
+
+                    <!-- Clean Process & Trust Highlights -->
+                    <div class="hub-features-list">
+                        <div class="hub-feature-item">
+                            <div class="hub-feature-icon">
+                                <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                            </div>
+                            <div class="hub-feature-text">
+                                <h4>24-Hour Technical Response</h4>
+                                <p>A senior solutions engineer reviews your requirements and gets in touch within one business day.</p>
+                            </div>
+                        </div>
+
+                        <div class="hub-feature-item">
+                            <div class="hub-feature-icon">
+                                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                            </div>
+                            <div class="hub-feature-text">
+                                <h4>Strict NDA &amp; IP Protection</h4>
+                                <p>Your ideas, workflows, and business concepts are 100% protected under our mutual confidentiality agreement.</p>
+                            </div>
+                        </div>
+
+                        <div class="hub-feature-item">
+                            <div class="hub-feature-icon">
+                                <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+                            </div>
+                            <div class="hub-feature-text">
+                                <h4>Clear Scope &amp; Accurate Estimates</h4>
+                                <p>Receive a structured architectural breakdown, recommended tech stack, milestone plan, and transparent budget.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct Chat Note -->
+                    <div class="hub-quick-note">
+                        <p>Need urgent technical assistance? Message us directly on <a href="https://wa.me/923396500012?text=Hello%20InvenTech,%20I%20have%20an%20urgent%20inquiry." target="_blank" rel="noopener noreferrer">WhatsApp (+92 339 6500012)</a>.</p>
+                    </div>
+                </div>
+
+                <!-- Right: Streamlined Inquiry Form Card -->
+                <div class="contact-form-card">
+                    <div class="form-header">
+                        <h3>Send Us a Message</h3>
+                        <p>Fill out the form below and our team will get back to you with a free consultation and project roadmap.</p>
+                    </div>
+
+                    <form id="mainContactForm" action="https://api.web3forms.com/submit" method="POST">
+                        <!-- Web3Forms Access Key & Config -->
+                        <input type="hidden" name="access_key" value="c31354d7-fe20-4aff-94f6-52945f17be40">
+                        <input type="hidden" name="subject" value="New Contact Us Page Project Inquiry">
+                        <input type="hidden" name="from_name" value="InvenTech Website">
+                        <input type="text" name="botcheck" style="display:none">
+
+                        <div class="contact-form-grid">
+                            <div class="form-field-row">
+                                <div class="form-group">
+                                    <label for="contact_name">Full Name <span class="required">*</span></label>
+                                    <input type="text" id="contact_name" name="name" placeholder="e.g. Salman Shahbaz" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact_email">Email Address <span class="required">*</span></label>
+                                    <input type="email" id="contact_email" name="email" placeholder="e.g. you@example.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-field-row">
+                                <div class="form-group">
+                                    <label for="contact_phone">Phone / WhatsApp</label>
+                                    <input type="tel" id="contact_phone" name="phone" placeholder="e.g. +92 339 6500012">
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact_service">Service Needed <span class="required">*</span></label>
+                                    <select id="contact_service" name="service" required>
+                                        <option value="" disabled selected>Select a service...</option>
+                                        <option value="Web Development">Web Development</option>
+                                        <option value="Mobile App Development">Mobile App Development</option>
+                                        <option value="Hospital Software (OPD-Pulse)">Hospital Software (OPD-Pulse)</option>
+                                        <option value="Custom CRM / ERP Systems">Custom CRM / ERP Systems</option>
+                                        <option value="UI/UX &amp; Branding">UI/UX &amp; Branding</option>
+                                        <option value="Other Inquiries">Other Inquiries</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact_message">Project Details / Message <span class="required">*</span></label>
+                                <textarea id="contact_message" name="message" rows="4" placeholder="Tell us about your project goals, required features, timeline, and any specific questions..." required></textarea>
+                            </div>
+
+                            <div class="form-action-wrap">
+                                <button type="submit" id="contactSubmitBtn" class="btn-contact-submit">
+                                    <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                                    <span>Send Message</span>
+                                </button>
+                                <p class="form-privacy-note">
+                                    <i class="fa-solid fa-shield-halved" aria-hidden="true"></i> We respect your privacy. All inquiries are covered under strict NDA.
+                                </p>
+                                <div id="formStatusAlert" class="form-status-alert" role="alert"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================================
+         Section 3: Office Location Map
+         ====================================================================== -->
+    <section class="contact-map-section" id="office-location">
+        <div class="container">
+            <div class="map-header">
+                <span class="map-tag">Our Location</span>
+                <h2>Visit Our Studio</h2>
+                <p>Located in the heart of Gujranwala. Feel free to book an appointment for an in-person meeting.</p>
+            </div>
+
+            <div class="map-frame-wrapper">
+                <iframe 
+                    title="InvenTech Office Location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108488.94828135898!2d74.11667793414999!3d32.18769222453888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391f298835845579%3A0x959779261a8ef801!2sGujranwala%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                
+                <div class="map-floating-badge">
+                    <div class="badge-pin-icon">
+                        <i class="fa-solid fa-map-pin" aria-hidden="true"></i>
+                    </div>
+                    <div class="badge-text-box">
+                        <h5>InvenTech Headquarters</h5>
+                        <span>People Colony, Gujranwala, Pakistan</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================================
+         Section 4: Frequently Asked Questions (FAQ)
+         ====================================================================== -->
+    <section class="contact-faq-section" id="faq">
+        <div class="container">
+            <div class="faq-content">
+                <!-- Left: FAQ Text & Accordion -->
+                <div class="faq-text">
+                    <span class="faq-tag">Have Questions?</span>
+                    <h2>Frequently Asked <span>Questions</span></h2>
+                    <p class="faq-subtitle">Common questions our clients ask before beginning their project with InvenTech.</p>
+
+                    <div class="faq-items">
+                        <!-- FAQ 1 -->
+                        <div class="faq-item active">
+                            <div class="faq-question">
+                                <h3>How quickly can InvenTech kick off our project?</h3>
+                                <i class="fas fa-plus" aria-hidden="true"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Once we finalize your requirements and scope, we typically kick off development within 3 to 5 business days. We begin with architectural planning and UI/UX wireframes so you see tangible progress from sprint one.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Do you offer a free consultation and project estimate?</h3>
+                                <i class="fas fa-plus" aria-hidden="true"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, absolutely. We provide a complimentary 30-minute technical consultation where our senior engineer evaluates your requirements, suggests the optimal tech stack, and provides a transparent cost and timeline estimate.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Can we sign a Non-Disclosure Agreement (NDA)?</h3>
+                                <i class="fas fa-plus" aria-hidden="true"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, 100%. We take client privacy and proprietary intellectual property very seriously. We are glad to sign a mutual NDA before you share any confidential business details or workflows.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>How does communication work during development?</h3>
+                                <i class="fas fa-plus" aria-hidden="true"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>You get direct communication with your dedicated project lead via WhatsApp, Slack, email, and scheduled video demo calls. We work in agile 1-2 week sprints, sharing live staging demos at each step.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 5 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What post-launch support and maintenance do you provide?</h3>
+                                <i class="fas fa-plus" aria-hidden="true"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Every project includes a complimentary warranty period post-deployment for bug fixes and adjustments. We also offer affordable monthly maintenance plans covering security updates, server monitoring, and feature enhancements.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: FAQ Illustration -->
+                <div class="faq-illustration">
+                    <img src="imgaes/Faq.jpg" alt="Frequently Asked Questions Illustration" class="faq-img" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Footer Include -->
+    <div id="site-footer"></div>
+
+    <!-- Global Scripts -->
+    <script src="js/header.js" defer></script>
+    <script src="js/menu.js" defer></script>
+    <script src="js/nav-hover.js" defer></script>
+    <script src="js/logo-slider.js" defer></script>
+    <script src="js/footer.js" defer></script>
+
+    <!-- Component-Specific Scripts -->
+    <script src="components/contact/form-channels/form-channels.js" defer></script>
+    <script src="components/contact/faq/faq.js" defer></script>
+</body>
+</html>

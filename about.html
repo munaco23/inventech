@@ -3,236 +3,306 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us - Virtual Software Company</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <title>About Us - Inventech Software Company</title>
+  
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="Home.css" />
-  <link rel="stylesheet" href="about.css" />
   <link rel="icon" type="image/jpg" href="imgaes/favicon.jpg">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="Home.css" />
+
+  <!-- Section-Wise Modular Components Styles -->
+  <link rel="stylesheet" href="components/about/hero/hero.css" />
+  <link rel="stylesheet" href="components/about/values-stats/values-stats.css" />
+  <link rel="stylesheet" href="components/about/story/story.css" />
+  <link rel="stylesheet" href="components/about/team/team.css" />
+  <link rel="stylesheet" href="components/about/cta/cta.css" />
 </head>
 <body>
-  <!-- Header Include -->
+  <!-- Dynamic Header Include -->
   <div id="site-header"></div>
 
-  <!-- Hero -->
+  <!-- 1. Hero Section -->
   <section class="about-hero">
     <div class="container">
-      <div class="hero-grid">
-        <div class="hero-text" data-aos="fade-right">
-          <span class="eyebrow"><i class="fas fa-square"></i> WHO WE ARE</span>
-          <h1>We build reliable, modern software that helps your business grow.</h1>
-          <p>
-            We’re a team of designers, engineers, and strategists crafting fast, secure, and scalable digital experiences—websites, apps, and platforms—powered by clean code and a user‑first mindset.
+      <div class="about-hero-grid">
+        <!-- Hero Text & Narrative Story -->
+        <div class="about-hero-text">
+          <span class="about-hero-badge"><i class="fas fa-compass"></i> WHO WE ARE & WHAT DRIVES US</span>
+          <h1>We Are <span>Inventech</span> — Where Ambitious Ideas Meet Engineering Rigor</h1>
+          <p class="about-hero-lead">
+            We are an independent software studio founded on a clear conviction: that digital products should be built with integrity, unyielding engineering standards, and deep human empathy. We partner with visionary founders and enterprises worldwide to architect scalable web platforms, cross-platform apps, and systems built to endure.
           </p>
+          
+          <!-- Single Clean Action CTA -->
+          <div class="about-hero-actions">
+            <a href="#about-story" class="about-hero-btn">
+              <span>Discover Our Story</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
-        <div class="hero-visual" data-aos="fade-left" aria-hidden="true">
-          <div class="blob">
-            <img src="imgaes/software-deveopment.png" alt="Team collaborating" />
+
+        <!-- Hero Studio Image Stage (Easily replaceable by user) -->
+        <div class="about-hero-visual">
+          <div class="illustration-stage">
+            <img src="imgaes/about-hero-studio.png" alt="Inventech Studio Team Collaboration" class="hero-main-illustration" />
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Highlights -->
-  <section class="about-highlights">
+  <!-- 2. Values & Stats Section -->
+  <section id="about-values" class="about-values-stats">
     <div class="container">
-      <div class="highlights-grid">
-        <div class="highlight-card">
-          <span class="h-icon"><i class="fas fa-handshake"></i></span>
-          <h3>Partnership First</h3>
-          <p>We work as an extension of your team—transparent, proactive, and outcome‑driven.</p>
+      <div class="values-header">
+        <span class="section-tag"><i class="fas fa-bullseye"></i> Core Principles</span>
+        <h2>Built on <span>Integrity</span>, Driven by Performance</h2>
+        <p>Three foundational pillars that guide how we engineer products and partner with our clients.</p>
+      </div>
+
+      <div class="values-grid">
+        <!-- Card 1 (Partnership) -->
+        <div class="value-card">
+          <div class="value-icon-box">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3>Partnership-First Approach</h3>
+          <p>We work as an authentic extension of your team. Transparent weekly demo sprints, direct engineer access, and zero middleman clutter.</p>
         </div>
-        <div class="highlight-card">
-          <span class="h-icon"><i class="fas fa-shield-halved"></i></span>
-          <h3>Quality & Security</h3>
-          <p>Robust architecture, code reviews, automated testing, and best‑practice security.</p>
+
+        <!-- Card 2 (Quality & Security) -->
+        <div class="value-card">
+          <div class="value-icon-box">
+            <i class="fas fa-shield-halved"></i>
+          </div>
+          <h3>Enterprise-Grade Quality</h3>
+          <p>Robust modular architecture, automated test suites, OWASP security audits, and clean maintainable code built for long-term scalability.</p>
         </div>
-        <div class="highlight-card">
-          <span class="h-icon"><i class="fas fa-gauge-high"></i></span>
+
+        <!-- Card 3 (Performance) -->
+        <div class="value-card">
+          <div class="value-icon-box">
+            <i class="fas fa-bolt-lightning"></i>
+          </div>
           <h3>Performance Obsessed</h3>
-          <p>Speed, SEO, and UX tuned to convert—Core Web Vitals and lighthouse‑ready.</p>
+          <p>Lightning-fast sub-second loading, Core Web Vitals optimization, and user-centric UX designed to maximize conversion and engagement.</p>
+        </div>
+      </div>
+
+      <!-- Integrated Stats Strip -->
+      <div class="stats-strip">
+        <div class="stat-item">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Projects Shipped</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Global Industries</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">98%</span>
+          <span class="stat-label">Client Satisfaction</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">5+</span>
+          <span class="stat-label">Years of Engineering</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Stats -->
-  <section class="about-stats">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat">
-          <span class="num">500+</span>
-          <span class="label">Projects Delivered</span>
-        </div>
-        <div class="stat">
-          <span class="num">15+</span>
-          <span class="label">Industries Served</span>
-        </div>
-        <div class="stat">
-          <span class="num">98%</span>
-          <span class="label">Client Satisfaction</span>
-        </div>
-        <div class="stat">
-          <span class="num">5+</span>
-          <span class="label">Years Shipping</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Mini Story -->
+  <!-- 3. Story & Methodology Section -->
   <section class="about-story">
     <div class="container">
-      <div class="story-wrap">
-        <div class="story-text">
-          <h2>Our Story</h2>
+      <div class="story-grid">
+        <div class="story-narrative">
+          <span class="section-tag"><i class="fas fa-compass"></i> Our Journey</span>
+          <h2>Bridging Strategy with <span>Engineering Rigor</span></h2>
           <p>
-            We’re an independent software studio focused on turning complex ideas into simple, high‑performing digital products. What began as a small craft team has grown into a senior, multidisciplinary group that blends engineering rigor with design excellence—without losing the care that defines our work.
+            Inventech was founded with a singular conviction: to eliminate bloated, fragile software and replace it with clean, reliable, and high-performing digital platforms.
           </p>
           <p>
-            Whether it’s a marketing site, a web platform, or a mobile app, we build with speed and reliability, validate with real users, and support what we ship. Our approach aligns strategy, design, and code to deliver measurable outcomes—faster pages, clearer journeys, and stronger conversions.
+            What began as an independent craft team has grown into a multidisciplinary software collective delivering custom platforms, cross-platform mobile apps, and scalable web ecosystems for clients across the globe.
           </p>
+          <div class="story-quote-box">
+            <div class="story-quote-icon"><i class="fas fa-quote-left"></i></div>
+            <blockquote>
+              "We don't simply write lines of code; we architect durable digital assets that power your business forward."
+            </blockquote>
+            <cite>Inventech Leadership Standard</cite>
+          </div>
         </div>
-        <ul class="story-points">
-          <li><i class="fas fa-circle-check"></i> Strategy to shipping—lean sprints with clear outcomes</li>
-          <li><i class="fas fa-circle-check"></i> Senior standards—reviews, automation, and quality gates</li>
-          <li><i class="fas fa-circle-check"></i> Open communication—weekly demos, transparent roadmaps</li>
-          <li><i class="fas fa-circle-check"></i> Built‑in excellence—performance, accessibility, security</li>
-          <li><i class="fas fa-circle-check"></i> Ongoing partnership—monitoring, updates, and support</li>
-        </ul>
+
+        <div class="story-methodology">
+          <!-- Step 1 -->
+          <div class="milestone-item">
+            <div class="milestone-num">01</div>
+            <div class="milestone-body">
+              <h4>Discovery & Blueprinting</h4>
+              <p>In-depth architectural planning, tech stack selection, and milestone scoping before code execution.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="milestone-item">
+            <div class="milestone-num">02</div>
+            <div class="milestone-body">
+              <h4>Agile Sprint Cycles</h4>
+              <p>Rapid bi-weekly demo iterations, continuous feedback, and transparent staging deployments.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="milestone-item">
+            <div class="milestone-num">03</div>
+            <div class="milestone-body">
+              <h4>Strict Quality & Security Gates</h4>
+              <p>Automated test coverage, responsive device testing, and rigorous code reviews.</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="milestone-item">
+            <div class="milestone-num">04</div>
+            <div class="milestone-body">
+              <h4>Launch & Proactive Support</h4>
+              <p>Zero-downtime production deployment, real-time uptime monitoring, and ongoing product SLAs.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Our Team -->
-  <section class="about-team">
+  <!-- 4. Team Section -->
+  <section id="team" class="about-team">
     <div class="container">
-      <div class="team-header">
-        <span class="eyebrow"><i class="fas fa-square"></i> OUR TEAM</span>
-        <h2>People behind the product</h2>
-        <p>Small senior team delivering big outcomes with care and craft.</p>
+      <div class="about-team-header">
+        <span class="section-tag"><i class="fas fa-users"></i> Meet The Collective</span>
+        <h2>People Behind the <span>Product</span></h2>
+        <p>Talented professionals dedicated to bringing your technological vision to life with care and craft.</p>
       </div>
-      <div class="team-marquee">
-        <div class="team-track">
-          <div class="team-card">
-            <div class="team-card-image">
+    </div>
+
+    <!-- Team Horizontal Continuous Smooth Carousel -->
+    <div class="about-team-carousel-wrapper">
+      <div class="about-team-track">
+        <!-- Group 1 -->
+        <div class="about-team-group">
+          <!-- Member 1 -->
+          <div class="about-member-card">
+            <div class="member-image-wrap">
               <img src="imgaes/Salman.jfif" alt="Salman Shahbaz">
-              <div class="team-social">
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-              </div>
             </div>
-            <div class="team-card-content">
+            <div class="member-info">
               <h3>Salman Shahbaz</h3>
-              <p class="team-role">CEO</p>
-              <p class="team-bio"></p>
+              <span class="member-role">CEO & Founder</span>
             </div>
           </div>
-          <div class="team-card">
-            <div class="team-card-image">
-              <img src="imgaes/abdullah-iqbal.jpg" alt="Abdullah Iqbal">
-              <div class="team-social">
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
-              </div>
+
+          <!-- Member 2 -->
+          <div class="about-member-card">
+            <div class="member-image-wrap">
+              <img src="imgaes/Mohsin.jpeg" alt="Mohsin Qayyum">
             </div>
-            <div class="team-card-content">
-              <h3>Abdullah Iqbal</h3>
-              <p class="team-role">CEO</p>
-              <p class="team-bio"></p>
+            <div class="member-info">
+              <h3>Mohsin Qayyum</h3>
+              <span class="member-role">Chief Commercial Officer (CCO)</span>
             </div>
           </div>
-          <div class="team-card">
-            <div class="team-card-image">
+
+          <!-- Member 3 -->
+          <div class="about-member-card">
+            <div class="member-image-wrap">
               <img src="imgaes/Ahamd-sattar.jpg" alt="Ahmad Sattar">
-              <div class="team-social">
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-              </div>
             </div>
-            <div class="team-card-content">
+            <div class="member-info">
               <h3>Ahmad Sattar</h3>
-              <p class="team-role">Developer</p>
-              <p class="team-bio"></p>
+              <span class="member-role">Full Stack Developer</span>
             </div>
           </div>
-          <div class="team-card">
-            <div class="team-card-image">
-              <img src="imgaes/abdullah-shahbaz.jpg" alt="Abdullah Shabaz">
-              <div class="team-social">
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
-              </div>
+
+          <!-- Member 4 -->
+          <div class="about-member-card">
+            <div class="member-image-wrap">
+              <img src="imgaes/abdullah-shahbaz.jpg" alt="Abdullah Shahbaz">
             </div>
-            <div class="team-card-content">
-              <h3>Abdullah Shabaz</h3>
-              <p class="team-role">UI/UX</p>
-              <p class="team-bio"></p>
+            <div class="member-info">
+              <h3>Abdullah Shahbaz</h3>
+              <span class="member-role">UI/UX Designer</span>
             </div>
           </div>
-          <div class="team-card" aria-hidden="true">
-            <div class="team-card-image">
+
+          <!-- Member 5 -->
+          <div class="about-member-card">
+            <div class="member-image-wrap">
+              <img src="imgaes/Muhammad.png" alt="Muhammad">
+            </div>
+            <div class="member-info">
+              <h3>Muhammad</h3>
+              <span class="member-role">UI/UX Designer</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Group 2 (Duplicate for continuous loop) -->
+        <div class="about-team-group" aria-hidden="true">
+          <!-- Member 1 -->
+          <div class="about-member-card">
+            <div class="member-image-wrap">
               <img src="imgaes/Salman.jfif" alt="Salman Shahbaz">
-              <div class="team-social">
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-              </div>
             </div>
-            <div class="team-card-content">
+            <div class="member-info">
               <h3>Salman Shahbaz</h3>
-              <p class="team-role">CEO</p>
-              <p class="team-bio"></p>
+              <span class="member-role">CEO & Founder</span>
             </div>
           </div>
-          <div class="team-card" aria-hidden="true">
-            <div class="team-card-image">
-              <img src="imgaes/abdullah-iqbal.jpg" alt="Abdullah Iqbal">
-              <div class="team-social">
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
-              </div>
+
+          <!-- Member 2 -->
+          <div class="about-member-card">
+            <div class="member-image-wrap">
+              <img src="imgaes/Mohsin.jpeg" alt="Mohsin Qayyum">
             </div>
-            <div class="team-card-content">
-              <h3>Abdullah Iqbal</h3>
-              <p class="team-role">CEO</p>
-              <p class="team-bio"></p>
+            <div class="member-info">
+              <h3>Mohsin Qayyum</h3>
+              <span class="member-role">Chief Commercial Officer (CCO)</span>
             </div>
           </div>
-          <div class="team-card" aria-hidden="true">
-            <div class="team-card-image">
+
+          <!-- Member 3 -->
+          <div class="about-member-card">
+            <div class="member-image-wrap">
               <img src="imgaes/Ahamd-sattar.jpg" alt="Ahmad Sattar">
-              <div class="team-social">
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-              </div>
             </div>
-            <div class="team-card-content">
+            <div class="member-info">
               <h3>Ahmad Sattar</h3>
-              <p class="team-role">Developer</p>
-              <p class="team-bio"></p>
+              <span class="member-role">Full Stack Developer</span>
             </div>
           </div>
-          <div class="team-card" aria-hidden="true">
-            <div class="team-card-image">
-              <img src="imgaes/abdullah-shahbaz.jpg" alt="Abdullah Shabaz">
-              <div class="team-social">
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
-              </div>
+
+          <!-- Member 4 -->
+          <div class="about-member-card">
+            <div class="member-image-wrap">
+              <img src="imgaes/abdullah-shahbaz.jpg" alt="Abdullah Shahbaz">
             </div>
-            <div class="team-card-content">
-              <h3>Abdullah Shabaz</h3>
-              <p class="team-role">UI/UX</p>
-              <p class="team-bio"></p>
+            <div class="member-info">
+              <h3>Abdullah Shahbaz</h3>
+              <span class="member-role">UI/UX Designer</span>
+            </div>
+          </div>
+
+          <!-- Member 5 -->
+          <div class="about-member-card">
+            <div class="member-image-wrap">
+              <img src="imgaes/Muhammad.png" alt="Muhammad">
+            </div>
+            <div class="member-info">
+              <h3>Muhammad</h3>
+              <span class="member-role">UI/UX Designer</span>
             </div>
           </div>
         </div>
@@ -240,15 +310,41 @@
     </div>
   </section>
 
-  <!-- Footer Include -->
+  <!-- 5. Call to Action (CTA) Section -->
+  <section class="about-cta">
+    <div class="container">
+      <div class="about-cta-box">
+        <div class="about-cta-content">
+          <span class="about-cta-badge"><i class="fas fa-sparkles"></i> Let's Collaborate</span>
+          <h2>Ready to turn your vision into <span>high-performance software</span>?</h2>
+          <p>Whether you're starting from scratch or scaling an existing platform, our senior engineers are ready to build with you.</p>
+          <div class="about-cta-actions">
+            <a href="https://wa.me/923396500012" target="_blank" rel="noopener" class="about-cta-btn-primary">
+              <i class="fab fa-whatsapp"></i>
+              <span>Let's Talk On WhatsApp</span>
+            </a>
+            <a href="index.html#portfolio" class="about-cta-btn-secondary">
+              <span>Explore Our Work</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Footer Include -->
   <div id="site-footer"></div>
 
-  <!-- Scripts -->
+  <!-- Global Scripts -->
   <script src="js/header.js" defer></script>
   <script src="js/menu.js" defer></script>
   <script src="js/nav-hover.js" defer></script>
   <script src="js/logo-slider.js" defer></script>
   <script src="js/footer.js" defer></script>
-  <script src="js/about.js" defer></script>
+
+  <!-- Component Scripts -->
+  <script src="components/about/values-stats/values-stats.js" defer></script>
+  <script src="components/about/team/team.js" defer></script>
 </body>
 </html>

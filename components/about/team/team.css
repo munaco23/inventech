@@ -1,0 +1,236 @@
+/* ==========================================================================
+   About Page - Team Component (Smooth Horizontal Carousel Track)
+   Path: components/about/team/team.css
+   Rules: Clean card framing, no social hover overlays, responsive horizontal scroll
+   ========================================================================== */
+
+.about-team {
+    padding: 5.5rem 0 6rem;
+    background: #f8fafc;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-team .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* ---------------- Team Header ---------------- */
+.about-team-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 3rem;
+}
+
+.about-team-header h2 {
+    font-size: 2.35rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    margin: 0.85rem 0 0.85rem;
+    letter-spacing: -0.5px;
+}
+
+.about-team-header h2 span {
+    color: #2FD5C7;
+}
+
+.about-team-header p {
+    font-size: 1.05rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ---------------- Auto Horizontal Smooth Carousel ---------------- */
+.about-team-carousel-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 1.25rem 0 1.75rem;
+    /* Clean edge fade so cards enter and exit softly */
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+    cursor: grab;
+}
+
+.about-team-carousel-wrapper:active {
+    cursor: grabbing;
+}
+
+.about-team-track {
+    display: flex;
+    width: max-content;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.about-team-group {
+    display: flex;
+    gap: 1.75rem;
+    padding-right: 1.75rem; /* Matches gap for flawless continuous seamless loop */
+    flex-shrink: 0;
+    will-change: transform;
+    animation: aboutTeamHorizontalScroll 26s linear infinite;
+}
+
+/* Pause scroll when hovering over the carousel or during touch inspection */
+.about-team-carousel-wrapper:hover .about-team-group,
+.about-team-carousel-wrapper.is-paused .about-team-group {
+    animation-play-state: paused;
+}
+
+@keyframes aboutTeamHorizontalScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* ---------------- Team Member Card ---------------- */
+.about-member-card {
+    width: 260px;
+    flex-shrink: 0;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.about-member-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(14, 184, 169, 0.45);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+/* Image Container */
+.member-image-wrap {
+    position: relative;
+    width: 100%;
+    height: 275px;
+    overflow: hidden;
+    background: #f1f5f9;
+}
+
+.member-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform 0.35s ease;
+}
+
+.about-member-card:hover .member-image-wrap img {
+    transform: scale(1.04);
+}
+
+/* Member Information (No Social Overlays) */
+.member-info {
+    padding: 1.25rem 1rem 1.4rem;
+}
+
+.member-info h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.35rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.member-role {
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: #0eb8a9;
+    margin: 0;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ---------------- Responsive Styles ---------------- */
+@media (max-width: 992px) {
+    .about-team {
+        padding: 5rem 0 5.5rem;
+    }
+
+    .about-team-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .about-member-card {
+        width: 245px;
+    }
+
+    .member-image-wrap {
+        height: 255px;
+    }
+
+    .about-team-group {
+        gap: 1.5rem;
+        padding-right: 1.5rem;
+        animation-duration: 22s;
+    }
+}
+
+@media (max-width: 640px) {
+    .about-team {
+        padding: 4.5rem 0 5rem;
+    }
+
+    .about-team-header {
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+
+    .about-team-header h2 {
+        font-size: 2rem;
+    }
+
+    .about-team-carousel-wrapper {
+        padding: 0.85rem 0 1.25rem;
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
+        mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
+    }
+
+    .about-team-group {
+        gap: 1.15rem;
+        padding-right: 1.15rem;
+        animation-duration: 18s;
+    }
+
+    .about-member-card {
+        width: 215px;
+        border-radius: 16px;
+    }
+
+    .member-image-wrap {
+        height: 230px;
+    }
+
+    .member-info {
+        padding: 1rem 0.85rem 1.15rem;
+    }
+
+    .member-info h3 {
+        font-size: 1.05rem;
+    }
+
+    .member-role {
+        font-size: 0.8rem;
+    }
+}

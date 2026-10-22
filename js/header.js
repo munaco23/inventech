@@ -128,7 +128,7 @@
           <li data-image="/imgaes/experties.jpg"><a href="/index.html#expertise">Expertise</a></li>
           <li data-image="/imgaes/whychoseus.jpg"><a href="/index.html#why-choose-us">Why Choose Us</a></li>
           <li data-image="/imgaes/testominal.jpg"><a href="/terms.html">Terms & Conditions</a></li>
-          <li data-image="/imgaes/contact.jpg"><a href="/index.html#contact">Contact</a></li>
+          <li data-image="/imgaes/contact.jpg"><a href="/contact.html">Contact</a></li>
         </ul>
       </div>
     </div>

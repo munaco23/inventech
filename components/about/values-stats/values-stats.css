@@ -1,0 +1,333 @@
+/* ==========================================================================
+   About Page - Values & Stats Component
+   Path: components/about/values-stats/values-stats.css
+   ========================================================================== */
+
+.about-values-stats {
+    padding: 5.5rem 0 6rem;
+    background: #f8fafc;
+    position: relative;
+}
+
+.about-values-stats .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* ---------------- Section Header ---------------- */
+.values-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 3.5rem;
+}
+
+.section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.35rem 0.95rem;
+    border-radius: 50px;
+    background: rgba(47, 213, 199, 0.14);
+    color: #0eb8a9;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-bottom: 0.85rem;
+    border: 1px solid rgba(47, 213, 199, 0.35);
+}
+
+.section-tag i {
+    font-size: 0.85rem;
+    color: #2FD5C7;
+}
+
+.values-header h2 {
+    font-size: 2.35rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    margin: 0 0 0.85rem;
+    letter-spacing: -0.5px;
+}
+
+.values-header h2 span {
+    color: #2FD5C7;
+}
+
+.values-header p {
+    font-size: 1.05rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ---------------- Values Grid ---------------- */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.value-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-top: 4px solid var(--card-accent, #2FD5C7);
+    border-radius: 20px;
+    padding: 2.35rem 2rem;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, border-color 0.28s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.value-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--card-accent, #2FD5C7);
+    box-shadow: 0 20px 42px -10px var(--card-shadow, rgba(47, 213, 199, 0.18));
+}
+
+/* Color Variant: Blue (Partnership) */
+.value-card.card-blue {
+    --card-accent: #3b82f6;
+    --card-shadow: rgba(59, 130, 246, 0.22);
+    --icon-bg: linear-gradient(135deg, rgba(59, 130, 246, 0.18) 0%, rgba(37, 99, 235, 0.06) 100%);
+    --icon-border: rgba(59, 130, 246, 0.35);
+    --icon-color: #2563eb;
+    --icon-shadow: rgba(59, 130, 246, 0.15);
+    --tag-bg: rgba(59, 130, 246, 0.08);
+    --tag-color: #1d4ed8;
+    --tag-border: rgba(59, 130, 246, 0.2);
+    --tag-hover: #3b82f6;
+}
+
+/* Color Variant: Teal (Security & Quality) */
+.value-card.card-teal {
+    --card-accent: #10b981;
+    --card-shadow: rgba(16, 185, 129, 0.22);
+    --icon-bg: linear-gradient(135deg, rgba(16, 185, 129, 0.18) 0%, rgba(5, 150, 105, 0.06) 100%);
+    --icon-border: rgba(16, 185, 129, 0.35);
+    --icon-color: #059669;
+    --icon-shadow: rgba(16, 185, 129, 0.15);
+    --tag-bg: rgba(16, 185, 129, 0.08);
+    --tag-color: #047857;
+    --tag-border: rgba(16, 185, 129, 0.2);
+    --tag-hover: #10b981;
+}
+
+/* Color Variant: Purple (Performance & Speed) */
+.value-card.card-purple {
+    --card-accent: #8b5cf6;
+    --card-shadow: rgba(139, 92, 246, 0.22);
+    --icon-bg: linear-gradient(135deg, rgba(139, 92, 246, 0.18) 0%, rgba(124, 58, 237, 0.06) 100%);
+    --icon-border: rgba(139, 92, 246, 0.35);
+    --icon-color: #7c3aed;
+    --icon-shadow: rgba(139, 92, 246, 0.15);
+    --tag-bg: rgba(139, 92, 246, 0.08);
+    --tag-color: #6d28d9;
+    --tag-border: rgba(139, 92, 246, 0.2);
+    --tag-hover: #8b5cf6;
+}
+
+.value-icon-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    background: var(--icon-bg, linear-gradient(135deg, rgba(47, 213, 199, 0.16) 0%, rgba(20, 216, 200, 0.06) 100%));
+    border: 1px solid var(--icon-border, rgba(47, 213, 199, 0.35));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--icon-color, #0eb8a9);
+    margin-bottom: 1.5rem;
+    box-shadow: 0 6px 16px var(--icon-shadow, rgba(47, 213, 199, 0.12));
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.value-card:hover .value-icon-box {
+    transform: scale(1.1);
+}
+
+.value-card h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.85rem;
+    letter-spacing: -0.3px;
+}
+
+.value-card p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: #475569;
+    margin: 0 0 1.6rem;
+    flex-grow: 1;
+}
+
+.value-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.4rem 0.95rem;
+    border-radius: 30px;
+    background: var(--tag-bg, #f1f5f9);
+    color: var(--tag-color, #0f172a);
+    border: 1px solid var(--tag-border, transparent);
+    font-size: 0.82rem;
+    font-weight: 600;
+    width: fit-content;
+    transition: all 0.2s ease;
+}
+
+.value-card:hover .value-tag {
+    background: var(--tag-hover, rgba(47, 213, 199, 0.14));
+    color: #ffffff;
+    border-color: transparent;
+}
+
+/* ---------------- Stats Strip ---------------- */
+.stats-strip {
+    margin-top: 3.5rem;
+    padding: 2.5rem 2rem;
+    background: linear-gradient(135deg, #090e1a 0%, #152238 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 22px;
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.18);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle corner glow in stats strip */
+.stats-strip::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(47, 213, 199, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.stat-item {
+    position: relative;
+    z-index: 1;
+    padding: 0 1rem;
+}
+
+.stat-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 15%;
+    height: 70%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.stat-number {
+    display: block;
+    font-size: clamp(2.35rem, 3.6vw, 3.15rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 0.45rem;
+    letter-spacing: -0.5px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Explicit Stat Accent Colors Matching Screenshot 3 */
+.stat-item:nth-child(1) .stat-number {
+    color: #3b82f6;
+    /* Blue: 500+ Projects */
+}
+
+.stat-item:nth-child(2) .stat-number {
+    color: #10b981;
+    /* Green: 15+ Industries */
+}
+
+.stat-item:nth-child(3) .stat-number {
+    color: #f59e0b;
+    /* Amber/Orange: 98% Satisfaction */
+}
+
+.stat-item:nth-child(4) .stat-number {
+    color: #ef4444;
+    /* Red/Coral: 5+ Years */
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 992px) {
+    .values-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .stats-strip {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem 1.5rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .stat-item:nth-child(2)::after {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .about-values-stats {
+        padding: 4.5rem 0 5rem;
+    }
+
+    .values-header h2 {
+        font-size: 2rem;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* 2 items per row on mobile */
+    .stats-strip {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem 0.85rem;
+        padding: 2.2rem 1rem;
+        border-radius: 18px;
+    }
+
+    .stat-item {
+        padding: 0 0.35rem;
+    }
+
+    .stat-item::after {
+        display: none !important;
+    }
+
+    .stat-number {
+        font-size: 1.95rem;
+        margin-bottom: 0.35rem;
+    }
+
+    .stat-label {
+        font-size: 0.78rem;
+        line-height: 1.35;
+        letter-spacing: 0.35px;
+        text-transform: uppercase;
+    }
+}

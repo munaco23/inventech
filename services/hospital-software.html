@@ -22,9 +22,9 @@
                     <p>InvenTech delivers secure, reliable hospital and medical management software that streamlines operations across OPD, IPD, pharmacy, lab, emergency, and specialized departments.</p>
 
                     <div class="hero-cta">
-                        <a class="btn btn-primary" href="https://drive.google.com/uc?export=download&id=1fijZOqCe6DGdBFUzlf_mqRvDDiq2fEJ8" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-solid fa-download" aria-hidden="true"></i>
-                            Download Demo
+                        <a class="btn btn-primary" href="#videoModal" id="heroViewDemoBtn" data-open-demo="true" onclick="if(window.openHmsDemoModal){window.openHmsDemoModal(event);return false;}">
+                            <i class="fa-solid fa-circle-play" aria-hidden="true"></i>
+                            View Demo
                         </a>
                         <a class="btn btn-secondary" href="https://wa.me/923396500012" target="_blank" rel="noopener noreferrer">
                             <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
@@ -131,24 +131,24 @@
         <div class="container">
             <div class="demo-card">
                 <div class="demo-text">
-                    <h2>Free <span>3‑Days Demo</span></h2>
-                    <p>Get a guided demo and see how workflows fit your hospital or clinic. We’ll configure a sample setup and walk you through OPD/IPD, lab, pharmacy, and billing.</p>
+                    <h2>Watch <span>Live Video Demo</span></h2>
+                    <p>Watch a comprehensive walkthrough of InvenTech OPD-Pulse in action. See how our software streamlines patient registration, OPD/IPD queues, doctor consultations, lab investigations, pharmacy stock, and real-time billing.</p>
                     <div class="demo-actions">
-                        <a class="btn btn-primary" href="https://drive.google.com/uc?export=download&id=1fijZOqCe6DGdBFUzlf_mqRvDDiq2fEJ8" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-solid fa-download" aria-hidden="true"></i>
-                            Download Demo
+                        <a class="btn btn-primary" href="#videoModal" onclick="if(window.openHmsDemoModal){window.openHmsDemoModal(event);return false;}" data-open-demo="true">
+                            <i class="fa-solid fa-circle-play" aria-hidden="true"></i>
+                            Watch Video Demo
                         </a>
-                        <a class="btn btn-secondary" href="https://wa.me/923396500012" target="_blank" rel="noopener noreferrer">
+                        <a class="btn btn-secondary" href="https://wa.me/923396500012?text=Hello%20InvenTech,%20I%20am%20interested%20in%20a%20Live%20Demo%20of%20your%20Hospital%20Management%20System." target="_blank" rel="noopener noreferrer">
                             <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
                             Chat on WhatsApp
                         </a>
                     </div>
                 </div>
-                <div class="demo-points" aria-hidden="true">
-                    <div class="dp"><i class="fa-solid fa-circle-check"></i> Setup & walkthrough</div>
-                    <div class="dp"><i class="fa-solid fa-circle-check"></i> Department modules overview</div>
-                    <div class="dp"><i class="fa-solid fa-circle-check"></i> Reports & billing flow</div>
-                    <div class="dp"><i class="fa-solid fa-circle-check"></i> Q&A with our team</div>
+                <div class="demo-points">
+                    <div class="dp"><i class="fa-solid fa-circle-check"></i> Complete OPD &amp; IPD Walkthrough</div>
+                    <div class="dp"><i class="fa-solid fa-circle-check"></i> Pharmacy, Lab &amp; Billing Workflows</div>
+                    <div class="dp"><i class="fa-solid fa-circle-check"></i> Doctor Consultations &amp; Patient EMR</div>
+                    <div class="dp"><i class="fa-solid fa-circle-check"></i> Quick Setup &amp; Dedicated Support</div>
                 </div>
             </div>
         </div>
@@ -440,6 +440,120 @@
             document.addEventListener('DOMContentLoaded', function () {
                 document.querySelectorAll('[data-gallery-slider]').forEach(initGallerySlider);
             });
+        })();
+    </script>
+
+    <!-- Video Demo Modal -->
+    <div id="videoModal" class="hms-video-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="hms-modal-backdrop" id="modalBackdrop"></div>
+        <div class="hms-modal-dialog">
+            <div class="hms-modal-header">
+                <div class="hms-modal-title" id="modalTitle">
+                    <span class="modal-badge"><i class="fa-solid fa-circle-play"></i> Product Demo</span>
+                    <h3>Hospital Management System Walkthrough</h3>
+                </div>
+                <button type="button" class="hms-modal-close" id="modalCloseBtn" aria-label="Close modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="hms-modal-body">
+                <div class="hms-video-wrapper">
+                    <iframe id="demoVideoIframe" 
+                            src="" 
+                            data-src="https://drive.google.com/file/d/1PND2rZlC2Bvii0WMlp8onKNTWAHejNPg/preview" 
+                            allow="autoplay; encrypted-media; fullscreen" 
+                            allowfullscreen 
+                            title="Hospital Management System Demo Video">
+                    </iframe>
+                </div>
+            </div>
+            <div class="hms-modal-footer">
+                <div class="modal-footer-info">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Ready to see it in action for your hospital or clinic?</span>
+                </div>
+                <div class="modal-footer-actions">
+                    <a href="https://wa.me/923396500012?text=Hello%20InvenTech,%20I%20watched%20the%20Hospital%20Management%20Software%20Demo%20and%20want%20to%20know%20more." 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="btn btn-whatsapp-modal">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Video Demo Modal Controller
+        (function () {
+            function getModalElements() {
+                return {
+                    modal: document.getElementById('videoModal'),
+                    closeBtn: document.getElementById('modalCloseBtn'),
+                    backdrop: document.getElementById('modalBackdrop'),
+                    iframe: document.getElementById('demoVideoIframe')
+                };
+            }
+
+            window.openHmsDemoModal = function (e) {
+                if (e && e.preventDefault) e.preventDefault();
+                const elements = getModalElements();
+                if (!elements.modal || !elements.iframe) return;
+
+                const videoSrc = elements.iframe.getAttribute('data-src');
+                if (videoSrc) {
+                    elements.iframe.src = videoSrc;
+                }
+                elements.modal.classList.add('active');
+                elements.modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            };
+
+            window.closeHmsDemoModal = function (e) {
+                if (e && e.preventDefault) e.preventDefault();
+                const elements = getModalElements();
+                if (!elements.modal || !elements.iframe) return;
+
+                elements.modal.classList.remove('active');
+                elements.modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+                elements.iframe.src = '';
+            };
+
+            function bindModalEvents() {
+                const elements = getModalElements();
+                if (!elements.modal) return;
+
+                if (elements.closeBtn) {
+                    elements.closeBtn.onclick = window.closeHmsDemoModal;
+                }
+                if (elements.backdrop) {
+                    elements.backdrop.onclick = window.closeHmsDemoModal;
+                }
+
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && elements.modal.classList.contains('active')) {
+                        window.closeHmsDemoModal();
+                    }
+                });
+            }
+
+            // Global Click Delegation: captures clicks on #heroViewDemoBtn, [data-open-demo], or a[href="#videoModal"]
+            document.addEventListener('click', function (e) {
+                const trigger = e.target.closest('#heroViewDemoBtn, [data-open-demo], a[href="#videoModal"]');
+                if (trigger) {
+                    e.preventDefault();
+                    window.openHmsDemoModal(e);
+                }
+            });
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', bindModalEvents);
+            } else {
+                bindModalEvents();
+            }
         })();
     </script>
 </body>

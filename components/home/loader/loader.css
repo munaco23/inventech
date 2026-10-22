@@ -1,0 +1,156 @@
+/* ==========================================================================
+   Inventech Minimalist & Premium Splash Screen Component
+   Path: components/home/loader/loader.css
+   ========================================================================== */
+
+#page-loader,
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #031926; /* Clean solid brand dark navy */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.5s ease;
+    will-change: opacity, visibility;
+}
+
+.loader-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    animation: loaderFadeIn 0.5s ease-out forwards;
+}
+
+@keyframes loaderFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Brand Logo */
+.loader-logo-wrap {
+    width: 96px;
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.loader-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 16px rgba(47, 213, 199, 0.45));
+    animation: logoSpin 1.8s linear infinite;
+    transform-origin: center center;
+    will-change: transform;
+}
+
+@keyframes logoSpin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Brand Text */
+.loader-text-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    margin-bottom: 1.6rem;
+}
+
+.loader-brand-name {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.loader-brand-tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #2FD5C7;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+/* Minimalist Hairline Progress */
+.loader-line {
+    width: 130px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 99px;
+    overflow: hidden;
+    position: relative;
+}
+
+.loader-line-fill {
+    width: 0%;
+    height: 100%;
+    background: #2FD5C7;
+    border-radius: 99px;
+    box-shadow: 0 0 8px rgba(47, 213, 199, 0.8);
+    transition: width 0.15s ease-out;
+}
+
+/* Exit state */
+.page-loader.is-loaded,
+#page-loader.hidden,
+body.loaded #page-loader {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+.page-loader.is-loaded .loader-inner,
+#page-loader.hidden .loader-inner,
+body.loaded #page-loader .loader-inner {
+    transform: scale(0.97) translateY(-4px);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.35s ease;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .loader-logo-wrap {
+        width: 82px;
+        height: 82px;
+        margin-bottom: 1.3rem;
+    }
+
+    .loader-brand-name {
+        font-size: 1.12rem;
+        letter-spacing: 0.25em;
+    }
+
+    .loader-brand-tag {
+        font-size: 0.7rem;
+    }
+
+    .loader-line {
+        width: 125px;
+    }
+}

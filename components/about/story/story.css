@@ -1,0 +1,176 @@
+/* ==========================================================================
+   About Page - Story & Methodology Component
+   Path: components/about/story/story.css
+   ========================================================================== */
+
+.about-story {
+    padding: 5.5rem 0 6rem;
+    background: #ffffff;
+    position: relative;
+    border-top: 1px solid #edf2f7;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.about-story .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4.5rem;
+    align-items: center;
+}
+
+/* ---------------- Left: Story Narrative ---------------- */
+.story-narrative {
+    max-width: 560px;
+}
+
+.story-narrative h2 {
+    font-size: 2.35rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    margin: 0.85rem 0 1.25rem;
+    letter-spacing: -0.5px;
+}
+
+.story-narrative h2 span {
+    color: #2FD5C7;
+}
+
+.story-narrative p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #64748b;
+    margin-bottom: 1.25rem;
+}
+
+/* Quote Card */
+.story-quote-box {
+    margin-top: 2rem;
+    padding: 1.5rem 1.75rem;
+    background: #f8fafc;
+    border-left: 4px solid #2FD5C7;
+    border-radius: 0 16px 16px 0;
+    position: relative;
+}
+
+.story-quote-icon {
+    font-size: 1.5rem;
+    color: rgba(47, 213, 199, 0.35);
+    margin-bottom: 0.5rem;
+}
+
+.story-quote-box blockquote {
+    margin: 0 0 0.6rem;
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: #1e293b;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.story-quote-box cite {
+    font-size: 0.85rem;
+    color: #0eb8a9;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ---------------- Right: Process & Methodology ---------------- */
+.story-methodology {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.milestone-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.35rem 1.5rem;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.03);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.milestone-item:hover {
+    transform: translateX(6px);
+    border-color: rgba(47, 213, 199, 0.5);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+}
+
+.milestone-num {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(47, 213, 199, 0.12);
+    color: #0eb8a9;
+    font-size: 1.05rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Consolas', monospace;
+    border: 1px solid rgba(47, 213, 199, 0.3);
+}
+
+.milestone-body h4 {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.35rem;
+}
+
+.milestone-body p {
+    font-size: 0.92rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 992px) {
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+    }
+
+    .story-narrative {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .about-story {
+        padding: 4.5rem 0 5rem;
+    }
+
+    .story-narrative h2 {
+        font-size: 2rem;
+    }
+
+    .milestone-item {
+        padding: 1.15rem 1.25rem;
+        gap: 1.15rem;
+    }
+
+    .milestone-num {
+        width: 38px;
+        height: 38px;
+        font-size: 0.95rem;
+    }
+
+    .milestone-body h4 {
+        font-size: 1.05rem;
+    }
+}

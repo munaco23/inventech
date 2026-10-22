@@ -1,0 +1,242 @@
+/* ==========================================================================
+   About Page - Hero Component (Clean, Authentic Tech Studio)
+   Path: components/about/hero/hero.css
+   Rules: No heavy image shadows, no extra pills/clutter, brand CTA with white text
+   ========================================================================== */
+
+.about-hero {
+    position: relative;
+    padding: 130px 0 85px;
+    background: linear-gradient(135deg, #f8fafc 0%, #edf6f9 50%, #f0fdfa 100%);
+    overflow: hidden;
+    color: #0f172a;
+    border-bottom: 1px solid #edf2f7;
+}
+
+/* Subtle architectural grid pattern in background */
+.about-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(to right, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(circle at 50% 45%, black 70%, transparent 100%);
+    -webkit-mask-image: radial-gradient(circle at 50% 45%, black 70%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.about-hero .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.about-hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 3.5rem;
+    align-items: center;
+}
+
+/* ---------------- Hero Text & Story Narrative (Left) ---------------- */
+.about-hero-text {
+    max-width: 630px;
+    text-align: left;
+}
+
+/* Eyebrow Badge */
+.about-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.38rem 1.05rem;
+    border-radius: 50px;
+    background: rgba(47, 213, 199, 0.12);
+    border: 1px solid rgba(47, 213, 199, 0.4);
+    color: #0b9e91;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.85px;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+}
+
+.about-hero-badge i {
+    font-size: 0.85rem;
+    color: #0eb8a9;
+}
+
+/* Hero Heading */
+.about-hero-text h1 {
+    font-size: clamp(2.35rem, 4vw, 3.4rem);
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.2;
+    margin: 0 0 1.25rem;
+    letter-spacing: -0.6px;
+}
+
+.about-hero-text h1 span {
+    background: linear-gradient(135deg, #0eb8a9 0%, #2FD5C7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Narrative Story Lead */
+.about-hero-lead {
+    font-size: 1.12rem;
+    line-height: 1.78;
+    color: #475569;
+    margin: 0 0 2rem;
+    font-weight: 400;
+}
+
+/* ---------------- Action Buttons (Only 1 primary CTA as per rules) ---------------- */
+.about-hero-actions {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+}
+
+.about-hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.95rem 2.2rem;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #0eb8a9 0%, #2FD5C7 100%);
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    border: none;
+    margin-top: 0 !important; /* Overrides Home.css .container a { margin-top: 80px } */
+    box-shadow: 0 4px 14px rgba(14, 184, 169, 0.25);
+    transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about-hero-btn i,
+.about-hero-btn span {
+    color: #ffffff !important;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.about-hero-btn i {
+    font-size: 0.9rem;
+    transition: transform 0.25s ease;
+}
+
+.about-hero-btn:hover {
+    background: linear-gradient(135deg, #088377 0%, #0eb8a9 100%);
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(14, 184, 169, 0.35);
+}
+
+.about-hero-btn:hover i {
+    transform: translateX(4px);
+    color: #ffffff !important;
+}
+
+.about-hero-btn:hover span {
+    color: #ffffff !important;
+}
+
+/* ---------------- Hero Illustration Stage (Clean, No Heavy Shadows) ---------------- */
+.about-hero-visual {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Clean border frame without heavy glowing box-shadows */
+.illustration-stage {
+    position: relative;
+    width: 100%;
+    max-width: 530px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 0.85rem;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04); /* Ultra subtle, clean */
+    transition: border-color 0.25s ease;
+    overflow: hidden;
+}
+
+.illustration-stage:hover {
+    border-color: #cbd5e1;
+}
+
+.hero-main-illustration {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+/* ---------------- Responsive Styles ---------------- */
+@media (max-width: 992px) {
+    .about-hero {
+        padding: 115px 0 75px;
+    }
+
+    .about-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .about-hero-text {
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .about-hero-actions {
+        justify-content: center;
+    }
+
+    .illustration-stage {
+        max-width: 480px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .about-hero {
+        padding: 100px 0 60px;
+    }
+
+    .about-hero-text h1 {
+        font-size: 2.15rem;
+    }
+
+    .about-hero-lead {
+        font-size: 1.02rem;
+        margin-bottom: 1.6rem;
+    }
+
+    .about-hero-actions {
+        width: 100%;
+    }
+
+    .about-hero-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .illustration-stage {
+        padding: 0.65rem;
+        border-radius: 16px;
+    }
+}

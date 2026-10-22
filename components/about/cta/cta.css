@@ -1,0 +1,171 @@
+/* ==========================================================================
+   About Page - Call to Action (CTA) Component
+   Path: components/about/cta/cta.css
+   ========================================================================== */
+
+.about-cta {
+    padding: 5.5rem 0 6rem;
+    background: #ffffff;
+    position: relative;
+}
+
+.about-cta .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.about-cta-box {
+    background: linear-gradient(135deg, #090e1a 0%, #0f1d38 100%);
+    border: 1px solid rgba(47, 213, 199, 0.28);
+    border-radius: 26px;
+    padding: 4.5rem 3rem;
+    text-align: center;
+    box-shadow: 0 25px 60px -15px rgba(15, 23, 42, 0.25), 0 0 45px rgba(47, 213, 199, 0.12);
+    position: relative;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+/* Subtle background radial glow */
+.about-cta-box::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(47, 213, 199, 0.18) 0%, transparent 65%);
+    pointer-events: none;
+}
+
+.about-cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.about-cta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    background: rgba(47, 213, 199, 0.12);
+    border: 1px solid rgba(47, 213, 199, 0.35);
+    color: #2FD5C7;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+}
+
+.about-cta-content h2 {
+    font-size: clamp(2rem, 3.5vw, 2.85rem);
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.25;
+    margin: 0 0 1rem;
+    letter-spacing: -0.5px;
+}
+
+.about-cta-content h2 span {
+    background: linear-gradient(135deg, #2FD5C7 0%, #14D8C8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.about-cta-content p {
+    font-size: 1.08rem;
+    line-height: 1.7;
+    color: #94a3b8;
+    margin: 0 auto 2.25rem;
+    max-width: 600px;
+}
+
+.about-cta-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.about-cta-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.95rem 2rem;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #2FD5C7 0%, #14D8C8 100%);
+    color: #0b1324;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(47, 213, 199, 0.3);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about-cta-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(47, 213, 199, 0.45);
+    color: #070e1b;
+}
+
+.about-cta-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.95rem 1.8rem;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.about-cta-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(47, 213, 199, 0.5);
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 768px) {
+    .about-cta {
+        padding: 4.5rem 0 5rem;
+    }
+
+    .about-cta-box {
+        padding: 3rem 1.5rem;
+        border-radius: 20px;
+    }
+
+    .about-cta-content h2 {
+        font-size: 1.85rem;
+    }
+
+    .about-cta-content p {
+        font-size: 0.98rem;
+    }
+
+    .about-cta-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .about-cta-btn-primary,
+    .about-cta-btn-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+}
